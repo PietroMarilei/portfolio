@@ -1,9 +1,11 @@
 <script>
 import BioComp from './BioComp.vue';
+import TestComp from './TestComp.vue';
 import { store } from '../store';
 export default {
   components: {
     BioComp,
+    TestComp,
   },
   data() {
     return {
@@ -13,15 +15,7 @@ export default {
     }
   },
   methods: {
-    slideConditions() {
-     if (this.slideLeft == 0) {
-      return ''
-     } else if (this.slideLeft > 0 && this.slideLeft % 2 != 0) {
-      return 'animationLeft'
-     } else if (this.slideLeft > 0 && this.slideLeft % 2 == 0) {
-      return 'animationRight'
-     }
-    }
+   
   },
 }
 </script>
@@ -29,33 +23,21 @@ export default {
 <template>
   <!-- main template -->
   <main>
-    <div class="wrapper" >
-      <div class="carousel " :class="this.slideUp == true ? 'animationFade' : ''">
-       
-        <div class="card" 
-        :class="slideConditions()">
-          <div class="centerCont">
-            <img id="sineGif" src="../assets/img/color_sinewave_arrow.gif" alt="sineGif">
-            <p @click="this.slideLeft ++; console.log(this.slideLeft)">Forward</p>
-          </div>
-        </div>
-        <div class="card" 
-        :class="slideConditions()">
-          <button @click="this.slideLeft ++; console.log(this.slideLeft)"> back</button>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magnam cupiditate placeat quas rem, non delectus, doloribus asperiores praesentium voluptatem adipisci voluptatum similique blanditiis nam porro id ipsa beatae ratione.</p>
-        </div>
-      </div>
 
-      <!-- lower section -->
-      <div class="vertical " :class="this.slideUp == true ? 'animationUp' : '' ">
-        <button @click="this.slideUp = !this.slideUp; console.log(this.slideUp)">up</button>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolores voluptates totam, a ducimus quos optio veniam, itaque quaerat culpa quisquam, ullam cum deserunt facilis ipsam unde cupiditate. Alias, numquam.
-          
-        </p>
-      </div>
-      <!-- <button>next</button>-->
+    <div class="carousel ">
+
+
+      <TestComp />
+
+      <TestComp />
+
+      <TestComp />
+
+      <TestComp />
+
+
     </div>
+
 
   </main>
 </template>
@@ -71,26 +53,30 @@ p {
   cursor: pointer;
 }
 
-.wrapper {
-  width: 100vw;
-  padding: 1rem;
-}
 
 .carousel {
-  overflow-x: hidden;
   display: flex;
+   display: flex;
+    flex-wrap: nowrap;
 }
 
 .card {
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed red;
+
 }
 
 #sineGif {
   max-width: 90vw;
   max-height: 80vh;
 }
+
 
 .animationLeft {
   animation: animationLeft 1s ease-in-out forwards;
@@ -111,6 +97,7 @@ p {
   0% {
     translate: -100vh 0;
   }
+
   100% {
     translate: 0 0;
   }
@@ -151,4 +138,5 @@ p {
   }
 }
 
-// sine here</style>
+// sine here
+</style>
