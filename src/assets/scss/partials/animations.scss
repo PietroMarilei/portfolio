@@ -1,0 +1,42 @@
+// here's all animations 💞
+
+.animationLeft {
+  animation: animationLeft 1s ease-in-out forwards;
+}
+
+@keyframes animationLeft {
+
+  100% {
+    translate: v-bind(orizontalOffset +' '+'vw' ) 0;
+  }
+}
+
+.animationRight {
+  animation: animationRight 1s ease-in-out forwards;
+}
+
+@keyframes animationRight {
+  100% {
+    translate: 100vw 0;
+  }
+}
+
+.animationUp {
+  animation: animationUp 1s ease-in-out forwards;
+}
+
+@keyframes animationUp {
+  100% {
+    translate: 0 -80vh;
+  }
+}
+
+.animationFade {
+  animation: animationFade 1s ease-in-out forwards;
+}
+
+@keyframes animationFade {
+  100% {
+    opacity: 0%;
+  }
+}
