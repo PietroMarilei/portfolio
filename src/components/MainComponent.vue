@@ -10,12 +10,29 @@ export default {
   data() {
     return {
       store,
-      slideLeft: 0,
-      slideUp: false,
+      animationClass: '',
+
+      orizontalOffset: 0 ,
+      verticalOffset: 0,
+
+      color: 'red'
+      
     }
   },
   methods: {
-   
+    goRight(){ 
+      this.orizontalOffset = this.orizontalOffset + 100
+      console.log('this.orizontalOffset',this.orizontalOffset);
+      this.animationClass = 'animationLeft'
+
+    },
+
+     goLeft() {
+      this.orizontalOffset = this.orizontalOffset - 100
+      console.log('this.orizontalOffset', this.orizontalOffset);
+      this.animationClass = 'animationRight'
+
+    }
   },
 }
 </script>
@@ -23,120 +40,92 @@ export default {
 <template>
   <!-- main template -->
   <main>
+   <div class="mainContainer" :class="this.animationClass">
+     <div class="topContainer">
 
-    <div class="carousel ">
+        <div class="card">
+            <TestComp />
+          </div>
 
+      </div>
 
-      <TestComp />
-
-      <TestComp />
-
-      <TestComp />
-
-      <TestComp />
-
-
-    </div>
+      <div class="centerContainer ">
 
 
+        <div class="card">
+          <TestComp />
+        </div>
+        <div class="card" >
+          <p>carta centrale</p>
+          
+          <button @click="this.left--"> back</button>
+          <TestComp />
+          <button @click=" goRight()"> next</button>
+        </div>
+        <div class="card">
+           <button @click=" goLeft(), console.log((this.left))"> back</button>
+          <TestComp />
+        </div>
+      </div>
+
+    <div class="bottomContainer">
+
+          <div class="card">
+              <TestComp />
+            </div>
+
+        </div>
+   </div>
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+
 main {
-  height: 80vh;
+  transform: translate(-100vw,-100vh);
   transition: all 1s ease-in-out;
+  color: aliceblue;
+  background-color: v-bind('color');
 }
 
 p {
   padding: 1rem;
   cursor: pointer;
+  background-color: blue;
 }
 
-
-.carousel {
+.topContainer {
+  transform: translate(100vw);
   display: flex;
-   display: flex;
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.centerContainer {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
+.bottomContainer {
+  transform: translate(100vw);
+  display: flex;
+  flex-wrap: nowrap;
+}
 .card {
   height: 100vh;
   width: 100vw;
   flex-shrink: 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border: 1px dashed red;
+  border: 3px dashed red;
+
+  padding: 1rem;
 
 }
 
-#sineGif {
-  max-width: 90vw;
-  max-height: 80vh;
-}
 
 
-.animationLeft {
-  animation: animationLeft 1s ease-in-out forwards;
-}
 
-@keyframes animationLeft {
-
-  100% {
-    translate: -100vw 0;
-  }
-}
-
-.animationRight {
-  animation: animationRight 1s ease-in-out forwards;
-}
-
-@keyframes animationRight {
-  0% {
-    translate: -100vh 0;
-  }
-
-  100% {
-    translate: 0 0;
-  }
-}
-
-.animationUp {
-  animation: animationUp 1s ease-in-out forwards;
-}
-
-@keyframes animationUp {
-  100% {
-    translate: 0 -80vh;
-  }
-}
-
-.animationFade {
-  animation: animationFade 1s ease-in-out forwards;
-}
-
-@keyframes animationFade {
-  100% {
-    opacity: 0%;
-  }
-}
-
-.animationRev {
-  animation-direction: reverse;
-}
-
-.centerCont {
-  display: flex;
-  height: 100%;
-  align-items: center;
-
-
-  img {
-    width: 90vw;
-  }
-}
-
-// sine here
 </style>
+
+

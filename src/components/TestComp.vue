@@ -15,18 +15,19 @@ export default {
 
 <template>
     <div class="wrapper">
-        <button> back</button>
+        
         <img src="../assets/img/giphy.gif" alt="">
-        <button>Next</button>
+      
     </div>
 </template>
 
 <style lang="scss" scoped>
 
 .wrapper {
-    border: 2px dashed red;
-   flex-shrink: 0;
-   width: 100vw;
+    // width: 100%;
+display: flex;
+justify-content: space-between;
+border: 2px solid blue;
 }
 
 </style>

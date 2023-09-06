@@ -32,11 +32,11 @@ export default {
 
 <template>
 
-  <HeaderComponent/>
+  <!-- <HeaderComponent/> -->
 
   <MainComponent/>
 
-  <FooterComponent/>
+  <!-- <FooterComponent/> -->
 
 </template>
 
@@ -44,6 +44,7 @@ export default {
   @use "./assets/scss/main.scss" as *;
   @use "./assets/scss/partials/variables.scss" as *;
   @import './assets/scss/partials/reset.scss';
+  @import './assets/scss/partials/animations.scss';
   
   body {
     background-color: rgb(0, 0, 0);
