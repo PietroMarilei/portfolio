@@ -1,24 +1,34 @@
-// here's all animations 💞
+/* // here's all animations 💞 */
 
-.animationLeft {
-  animation: animationLeft 1s ease-in-out forwards;
-}
+.goRight {
+  animation: goRight 1s ease-in-out forwards;
+  
+};
 
-@keyframes animationLeft {
+@keyframes goRight {
+
+  // 0% {
+  //   translate: ;
+  // }
 
   100% {
-    translate: v-bind(orizontalOffset +' '+'vw' ) 0;
+   transform: translate(-100vw0) ;
   }
+};
+
+.goCenter {
+  animation: goCenterFromRight 1s ease-in-out forwards;
 }
 
-.animationRight {
-  animation: animationRight 1s ease-in-out forwards;
-}
-
-@keyframes animationRight {
-  100% {
-    translate: 100vw 0;
+@keyframes goCenter {
+ //ho bisogno di sapere dove sono;
+   0% {
+    translate: v-bind(orizontalOffset);
   }
+
+    100% {
+        translate: 0 0;
+    }
 }
 
 .animationUp {
@@ -39,4 +49,20 @@
   100% {
     opacity: 0%;
   }
+}
+
+// no dinamic animation 
+.goCenterfromRight {
+  animation: goCenterFromRight 1s ease-in-out forwards;
+}
+
+@keyframes goCenterfromRight {
+ //ho bisogno di sapere dove sono;
+   0% {
+    translate:-100vw 0;
+  }
+
+    100% {
+        translate: 0 0;
+    }
 }
