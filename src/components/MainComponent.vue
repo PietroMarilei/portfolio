@@ -11,27 +11,27 @@ export default {
       store,
       animationClass: '',
 
-      orizontalOffset: 0 ,
+      orizontalOffset: 0,
       verticalOffset: 0,
 
-      color: 'red',
+      testColor: 'red'
 
     }
   },
   methods: {
-    goRight(){ 
+    goRight() {
       this.orizontalOffset = this.orizontalOffset - 100
-      console.log('this.orizontalOffset',this.orizontalOffset);
+      console.log('this.orizontalOffset', this.orizontalOffset);
       this.animationClass = 'goRight'
 
     },
 
-     goLeft() {
-      this.orizontalOffset = this.orizontalOffset + 100
-      console.log('this.orizontalOffset', this.orizontalOffset);
-      this.animationClass = 'animationRight'
+    //  goLeft() {
+    //   this.orizontalOffset = this.orizontalOffset + 100
+    //   console.log('this.orizontalOffset', this.orizontalOffset);
+    //   this.animationClass = 'animationRight'
 
-    },
+    // },
 
     goCenterFromRight() {
       this.orizontalOffset = 0
@@ -41,7 +41,7 @@ export default {
   },
 
   mounted() {
-    console.log((this.orizontalOffset))
+
   }
 }
 </script>
@@ -49,12 +49,12 @@ export default {
 <template>
   <!-- main template -->
   <main>
-   <div class="mainContainer" :class="this.animationClass" >
-     <div class="topContainer">
+    <div class="mainContainer" :class="this.animationClass">
+      <div class="topContainer">
 
         <div class="card">
-            <TestComp />
-          </div>
+          <TestComp />
+        </div>
 
       </div>
 
@@ -63,45 +63,50 @@ export default {
 
         <div class="card">
           <TestComp />
+          <button @click=" goCenterFromRight()"> back</button>
         </div>
-        <div class="card" >
-          <p>carta centrale</p>
-          
-          <button @click=""> back</button>
-          <TestComp />
-          <button @click="goRight() "> next</button>
-        </div>
+
+
         <div class="card">
-           <button @click=" goCenterFromRight(), console.log((this.left))"> back</button>
+          <p>carta centrale</p>
+          <button @click=" goCenterFromRight()"> back</button>
           <TestComp />
+          <button @click="goRight()"> next</button>
+        </div>
+
+
+
+        <div class="card">
+          <button @click=" goCenterFromRight()"> back</button>
+          <TestComp />
+
+
         </div>
       </div>
 
-    <div class="bottomContainer">
+      <div class="bottomContainer">
 
-          <div class="card">
-              <TestComp />
-            </div>
-
+        <div class="card">
+          <TestComp />
         </div>
-   </div>
+
+      </div>
+    </div>
   </main>
 </template>
 
-<style lang="css" scoped>
-
-main {
-  transform: translate(-100vw,-100vh);
-  transition: all 1s ease-in-out;
-  color: aliceblue;
-  /* background-color: v-bind('color'); */
-
-}
-
+<style lang="scss" scoped>
 p {
   padding: 1rem;
   cursor: pointer;
   background-color: blue;
+}
+
+.mainContainer {
+  transform: translate(-100vw, -100vh);
+  transition: all 1s ease-in-out;
+  background-color: v-bind(testColor);
+
 }
 
 .topContainer {
@@ -109,8 +114,8 @@ p {
   display: flex;
   flex-wrap: nowrap;
 
-  animation: all 1s ease-in-out;
 }
+
 .centerContainer {
   display: flex;
   flex-wrap: nowrap;
@@ -121,6 +126,7 @@ p {
   display: flex;
   flex-wrap: nowrap;
 }
+
 .card {
   height: 100vh;
   width: 100vw;
@@ -128,11 +134,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px dashed red;
+  border: 3px dashed rgb(255, 0, 0);
   padding: 1rem;
 
 }
-
 
 
 

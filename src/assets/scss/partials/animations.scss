@@ -1,68 +1,63 @@
 /* // here's all animations 💞 */
 
+// .goRight {
+//   animation: goRight 1s ease-in-out forwards;
+  
+// };
+
+// @keyframes goRight {
+
+//   // 0% {
+//   //   translate: ;
+//   // }
+
+//   100% {
+//   translate:(-100vw 0) ;
+//   }
+// };
+
+// .goCenter {
+//   animation: goCenterFromRight 1s ease-in-out forwards;
+// }
+
+// @keyframes goCenter {
+//  //ho bisogno di sapere dove sono;
+//    0% {
+//     translate: -100vw 0;
+//   }
+
+//     100% {
+//         translate: 0 0;
+//     }
+// }
+
+
+
+//* // no dinamic animation  cant use v-bind*/
 .goRight {
   animation: goRight 1s ease-in-out forwards;
-  
-};
+}
 
 @keyframes goRight {
 
-  // 0% {
-  //   translate: ;
-  // }
-
   100% {
-   transform: translate(-100vw0) ;
-  }
-};
 
-.goCenter {
-  animation: goCenterFromRight 1s ease-in-out forwards;
-}
-
-@keyframes goCenter {
- //ho bisogno di sapere dove sono;
-   0% {
-    translate: v-bind(orizontalOffset);
-  }
-
-    100% {
-        translate: 0 0;
-    }
-}
-
-.animationUp {
-  animation: animationUp 1s ease-in-out forwards;
-}
-
-@keyframes animationUp {
-  100% {
-    translate: 0 -80vh;
+    translate: -100vw 0;
   }
 }
 
-.animationFade {
-  animation: animationFade 1s ease-in-out forwards;
-}
+;
 
-@keyframes animationFade {
-  100% {
-    opacity: 0%;
-  }
-}
-
-// no dinamic animation 
 .goCenterfromRight {
-  animation: goCenterFromRight 1s ease-in-out forwards;
+  animation: goCenterfromRight 1s ease-in-out backwards;
 }
 
 @keyframes goCenterfromRight {
- //ho bisogno di sapere dove sono;
-   0% {
-    translate:-100vw 0;
+  0% {
+    translate: -100vw 0;
   }
 
-    100% {
-        translate: 0 0;
-    }
+  100% {
+    translate: 0 0
+  }
 }
