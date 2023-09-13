@@ -1,10 +1,12 @@
 <script>
 import TestComp from './TestComp.vue';
+import ThreeDCubeComponent from './ThreeDCubeComponent.vue';
 import { store } from '../store';
 import { vShow } from 'vue';
 export default {
   components: {
     TestComp,
+    ThreeDCubeComponent,
   },
   data() {
     return {
@@ -13,30 +15,29 @@ export default {
 
       orizontalOffset: 0,
       verticalOffset: 0,
-
-      testColor: 'red'
-
     }
   },
   methods: {
     goRight() {
       this.orizontalOffset = this.orizontalOffset - 100
-      console.log('this.orizontalOffset', this.orizontalOffset);
       this.animationClass = 'goRight'
 
     },
 
-    //  goLeft() {
-    //   this.orizontalOffset = this.orizontalOffset + 100
-    //   console.log('this.orizontalOffset', this.orizontalOffset);
-    //   this.animationClass = 'animationRight'
+     goLeft() {
+      this.orizontalOffset = this.orizontalOffset + 100
+      this.animationClass = 'goLeft'
 
-    // },
+    },
 
     goCenterFromRight() {
       this.orizontalOffset = 0
-      console.log('this.orizontalOffset', this.orizontalOffset);
       this.animationClass = 'goCenterfromRight'
+    },
+    //why this bug ? ❌
+     goCenterfromLeft() {
+      this.orizontalOffset = 0
+      this.animationClass = 'goCenterfromLeft'
     }
   },
 
@@ -62,23 +63,26 @@ export default {
 
 
         <div class="card">
-          <TestComp />
-          <button @click=" goCenterFromRight()"> back</button>
+          
+          <p>carta sinistra</p>
+            <button @click=" goCenterFromLeft()"> back</button>
+            <TestComp />
         </div>
 
 
         <div class="card">
           <p>carta centrale</p>
-          <button @click=" goCenterFromRight()"> back</button>
+          <button @click=" goLeft()"> back</button>
           <TestComp />
           <button @click="goRight()"> next</button>
+          <ThreeDCubeComponent/>
         </div>
 
 
 
         <div class="card">
-          <button @click=" goCenterFromRight()"> back</button>
           <TestComp />
+            <button @click=" goCenterFromRight()"> back</button>
 
 
         </div>
@@ -105,7 +109,7 @@ p {
 .mainContainer {
   transform: translate(-100vw, -100vh);
   transition: all 1s ease-in-out;
-  background-color: v-bind(testColor);
+ 
 
 }
 
@@ -113,7 +117,6 @@ p {
   transform: translate(100vw);
   display: flex;
   flex-wrap: nowrap;
-
 }
 
 .centerContainer {
@@ -136,10 +139,7 @@ p {
   align-items: center;
   border: 3px dashed rgb(255, 0, 0);
   padding: 1rem;
-
 }
-
-
 
 </style>
 

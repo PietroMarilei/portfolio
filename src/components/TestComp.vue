@@ -8,15 +8,13 @@ export default {
         }
     },
     methods: {
-
     },
 }
 </script>
 
 <template>
-    <div class="wrapper">
-        
-        <img src="../assets/img/giphy.gif" alt="">
+    <div class="wrapper">        
+        <img src="../assets/img/lines.gif" alt="">
       
     </div>
 </template>
@@ -28,6 +26,7 @@ export default {
 display: flex;
 justify-content: space-between;
 border: 2px solid blue;
+
 }
 
 </style>

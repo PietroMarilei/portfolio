@@ -3,6 +3,7 @@ import { store } from './store';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import ThreeDCubeComponent from './components/ThreeDCubeComponent.vue';
 
 export default {
   components: {
