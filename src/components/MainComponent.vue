@@ -82,16 +82,22 @@ export default {
   
   
           <div class="card">
-            <p>carta centrale</p>
-            <button @click=" goLeft()"> back</button>
+            <HomeComp 
+            @goLeft=" goLeft()"
+            @goRight=" goRight()"
+            @goUp=" goUp()"
+            @goDown=" goDown()"
+            />
 
-            <HomeComp/>
-            
-            <TestComp />
-            <button @click="goRight()"> next</button>
+            <p>carta centrale</p>
+            <!-- <button @click=" goLeft()"> back</button> -->
+
+
+            <!-- <TestComp /> -->
+            <!-- <button @click="goRight()"> next</button>
   
             <button @click="goUp()"> up</button>
-            <button @click="goDown()"> Down</button>
+            <button @click="goDown()"> Down</button> -->
           </div>
   
           <div class="card">
@@ -135,7 +141,6 @@ p {
   // top: -100vh;
   // left: -100vw;
   transition: all 1s ease-in-out;
-  // overflow: hidden;
 
 }
 
