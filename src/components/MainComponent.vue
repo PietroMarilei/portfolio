@@ -2,9 +2,11 @@
 import TestComp from './TestComp.vue';
 import { store } from '../store';
 import { vShow } from 'vue';
+import HomeComp from './HomeComp.vue';
 export default {
   components: {
     TestComp,
+    HomeComp,
   },
   data() {
     return {
@@ -82,6 +84,9 @@ export default {
           <div class="card">
             <p>carta centrale</p>
             <button @click=" goLeft()"> back</button>
+
+            <HomeComp/>
+            
             <TestComp />
             <button @click="goRight()"> next</button>
   
