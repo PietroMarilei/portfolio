@@ -33,8 +33,8 @@ export default {
 <template>
 
   <!-- <HeaderComponent/> -->
-
-  <MainComponent/>
+  <router-view></router-view>
+  <!-- <MainComponent/> -->
 
   <!-- <FooterComponent/> -->
 

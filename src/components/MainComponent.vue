@@ -11,32 +11,40 @@ export default {
       store,
       animationClass: '',
 
-      orizontalOffset: 0,
-      verticalOffset: 0,
-
-      testColor: 'red'
-
     }
   },
   methods: {
+    goUp() {
+      console.log('goUp');
+      this.animationClass = 'goUp'
+
+    },
+     goDown() {
+      console.log('goDown');
+      this.animationClass = 'goDown'
+
+    },
+
     goRight() {
-      this.orizontalOffset = this.orizontalOffset - 100
-      console.log('this.orizontalOffset', this.orizontalOffset);
+      console.log('goRight');
       this.animationClass = 'goRight'
 
     },
 
-    //  goLeft() {
-    //   this.orizontalOffset = this.orizontalOffset + 100
-    //   console.log('this.orizontalOffset', this.orizontalOffset);
-    //   this.animationClass = 'animationRight'
+    goLeft() {
+      console.log('goLeft');
+      this.animationClass = 'goLeft'
 
-    // },
+    },
 
     goCenterFromRight() {
-      this.orizontalOffset = 0
-      console.log('this.orizontalOffset', this.orizontalOffset);
+      console.log('goCenterFromRight');
       this.animationClass = 'goCenterfromRight'
+    },
+
+    goCenterfromLeft() {
+      console.log('goCenterfromLeft');
+      this.animationClass = 'goCenterfromLeft'
     }
   },
 
@@ -53,6 +61,7 @@ export default {
       <div class="topContainer">
 
         <div class="card">
+          <p>carta sopra</p>
           <TestComp />
         </div>
 
@@ -63,15 +72,18 @@ export default {
 
         <div class="card">
           <TestComp />
-          <button @click=" goCenterFromRight()"> back</button>
+          <button @click=" goCenterfromLeft()"> back</button>
         </div>
 
 
         <div class="card">
           <p>carta centrale</p>
-          <button @click=" goCenterFromRight()"> back</button>
+          <button @click=" goLeft()"> back</button>
           <TestComp />
           <button @click="goRight()"> next</button>
+
+          <button @click="goUp()"> up</button>
+          <button @click="goDown()"> Down</button>
         </div>
 
 
@@ -79,14 +91,13 @@ export default {
         <div class="card">
           <button @click=" goCenterFromRight()"> back</button>
           <TestComp />
-
-
         </div>
       </div>
 
       <div class="bottomContainer">
 
         <div class="card">
+          <p>carta sotto</p>
           <TestComp />
         </div>
 
@@ -96,6 +107,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+main {
+  position: relative;
+}
 p {
   padding: 1rem;
   cursor: pointer;
@@ -103,9 +117,12 @@ p {
 }
 
 .mainContainer {
-  transform: translate(-100vw, -100vh);
+  // transform: translate(-100vw, -100vh);
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
   transition: all 1s ease-in-out;
-  background-color: v-bind(testColor);
+  // overflow: hidden;
 
 }
 
@@ -138,9 +155,6 @@ p {
   padding: 1rem;
 
 }
-
-
-
 </style>
 
 
