@@ -89,7 +89,7 @@ export default {
             @goDown=" goDown()"
             />
 
-            <p>carta centrale</p>
+            <!-- <p>carta centrale</p> -->
             <!-- <button @click=" goLeft()"> back</button> -->
 
 
@@ -169,7 +169,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px dashed rgb(255, 0, 0);
+  // border: 3px dashed rgb(255, 0, 0);
   padding: 1rem;
 
 }
