@@ -2,6 +2,7 @@
 import { store } from '../store';
 
 export default {
+    emits: ['goLeft', 'goRight', 'goUp', 'goDown'],
     data() {
         return {
             store,
@@ -20,11 +21,10 @@ export default {
             <div class="line"></div>
 
             <div class="pageUp" @click="$emit('goUp')">
-                <!-- <p>Testo Sopra</p> -->
-                <div class="iconUp">
+                <div class="iconUp pulse">
                     <div class="keyBodyUp">
                         <div class="arrowUp">
-                            <i class="fa-solid fa-chevron-up fa-fade"></i>
+                            <i class="fa-solid fa-chevron-up "></i>
                         </div>
                     </div>
                 </div>
@@ -36,10 +36,10 @@ export default {
             <div class="pageLeft" @click="$emit('goLeft')">
                 <div class="verticalLine"></div>
                 
-                <div class="iconLeft">
+                <div class="iconLeft pulse" >
                     <div class="keyBodyLeft">
                         <div class="arrowLeft">
-                            <i class="fa-solid fa-chevron-left fa-beat-fade"></i>
+                            <i class="fa-solid fa-chevron-left"></i>
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@ export default {
                 </h1>
             </div>
              <div class="pageRight" @click="$emit('goRight')">
-                    <div class="iconRight">
+                    <div class="iconRight pulse">
                         <div class="keyBodyRight">
                             <div class="arrowRight">
                                 <i class="fa-solid fa-chevron-right fa-beat-fade"></i>
@@ -68,7 +68,7 @@ export default {
 
                 <div class="pageDown" @click="$emit('goDown')">
                     <!-- <p>Testo Sopra</p> -->
-                    <div class="iconDown">
+                    <div class="iconDown pulse">
                         <div class="keyBodyDown">
                             <div class="arrowDown">
                                 <i class="fa-solid fa-chevron-down fa-fade"></i>
@@ -125,10 +125,10 @@ h1 {
     }
 
     .iconUp {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
 
         .keyBodyUp {
             width: 50px;
@@ -208,10 +208,10 @@ h1 {
     }
 
     .iconDown {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
 
         .keyBodyDown {
             width: 50px;

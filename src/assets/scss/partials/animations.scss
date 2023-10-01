@@ -1,5 +1,4 @@
 /* // here's all animations 💞 */
-// no dinamic animation  cant use v-bind
 
 .goUp {
   animation: goUp 1s ease-in-out forwards;
@@ -46,7 +45,7 @@
 };
 
 .goCenterfromRight {
-  animation: goCenterfromRight 1s ease-in-out backwards;
+  animation: goCenterfromRight 1s ease-in-out forwards;
 }
 
 @keyframes goCenterfromRight {
@@ -60,7 +59,7 @@
 };
 
 .goCenterfromLeft {
-  animation: goCenterfromLeft 1s ease-in-out backwards;
+  animation: goCenterfromLeft 1s ease-in-out forwards;
 }
 
 @keyframes goCenterfromLeft {
@@ -73,7 +72,7 @@
   }
 };
 .goCenterfromUp {
-  animation: goCenterfromUp 1s ease-in-out backwards;
+  animation: goCenterfromUp 1s ease-in-out forwards;
 }
 
 @keyframes goCenterfromUp {
@@ -86,7 +85,7 @@
   }
 };
 .goCenterfromDown {
-  animation: goCenterfromDown 1s ease-in-out backwards;
+  animation: goCenterfromDown 1s ease-in-out forwards;
 }
 
 @keyframes goCenterfromDown {
@@ -97,4 +96,23 @@
   100% {
     translate: 0 0
   }
+}
+// -------------------------------------
+
+.pulse {
+ -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out; 
+    -moz-animation: pulse 3s infinite ease-in-out; 
+    animation: pulse 3s infinite ease-in-out;
+}
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.3; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.3; }
+}
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.9); opacity: 0.3; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.9); opacity: 0.3; }
 }
