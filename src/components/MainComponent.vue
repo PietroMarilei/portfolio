@@ -68,7 +68,7 @@ export default {
   
           <div class="card">
             <p>carta sopra</p>
-            <TestComp />
+            <!-- <TestComp /> -->
             <button @click="goCenterfromUp()"> Down</button>
           </div>
   
