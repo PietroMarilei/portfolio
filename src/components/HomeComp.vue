@@ -9,21 +9,23 @@ export default {
         }
     },
     methods: {
-
     },
+    mounted(){
+        
+    }
 }
 </script>
 
 <template>
-    <img src="" alt="">
-    <div class="container">
+    <!-- <button @keyup.up="console.log('up')">test</button> -->
+    <div class="container" >
         <h3 class="mx-2">use &#9650; to Bio</h3>
         <div class="row d-flex">
             <div class="lineWrapper">
                 <div class="line"></div>
             </div>
             
-            <div class="pageUp" @click="$emit('goUp')">
+            <div class="pageUp"  @click="$emit('goUp')">
                 <div class="iconUp pulse">
                     <div class="keyBodyUp">
                         <div class="arrowUp">

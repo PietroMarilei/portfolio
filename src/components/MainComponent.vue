@@ -33,7 +33,8 @@ export default {
       console.log('goLeft');
       this.animationClass = 'goLeft'
     },
-// -----------------------------------------
+    // -----------------------------------------
+  
     goCenterFromRight() {
       console.log('goCenterFromRight');
       this.animationClass = 'goCenterfromRight'
@@ -54,7 +55,45 @@ export default {
   },
 
   mounted() {
+    window.addEventListener('keyup', (event) => {
+      console.log(event.keyCode);
+      console.log((this.animationClass));
 
+      let key = event.keyCode
+// il controllo parte dal tasto, se premo su, o sono sulla pagina centrale oppure su quella giú. Per verificare di essere nella pagina centrale basta verificare se il testo è diverso goDown che sarebbe il testo presente se fossi nella pagina giú. Quindi SE NON SONO nella pagina giú e sto premendo su vuol dire che sono al centro. SE SONO nella pagina giú, voglio tornare al centro da giú
+      if (key == '38') {
+        if(this.animationClass !== 'goDown'){
+          this.animationClass = 'goUp';
+        } else {
+          this.animationClass = 'goCenterfromDown';
+        }
+      } else
+        if (key == '40') {
+          if(this.animationClass !== 'goUp'){
+            this.animationClass = 'goDown';
+
+          } else {
+            this.animationClass = 'goCenterfromUp';
+          }
+        } else
+          if (key == '37') {
+            if (this.animationClass !== 'goRight') {
+              this.animationClass = 'goLeft';
+  
+            } else {
+              this.animationClass = 'goCenterfromRight';
+            }
+          }
+          else
+            if (key == '39') {
+              if (this.animationClass !== 'goLeft') {
+                this.animationClass = 'goRight';  
+              } else {
+                this.animationClass = 'goCenterfromLeft';
+    
+              }
+            }
+    });
   }
 }
 </script>
@@ -65,29 +104,24 @@ export default {
     <div class="mainWrapper">
       <div class="mainContainer" :class="this.animationClass">
         <div class="topContainer">
-  
+
           <div class="card">
             <p>carta sopra</p>
             <!-- <TestComp /> -->
             <button @click="goCenterfromUp()"> Down</button>
           </div>
-  
+
         </div>
-  
+
         <div class="centerContainer ">
           <div class="card">
             <TestComp />
             <button @click=" goCenterfromLeft()"> back</button>
           </div>
-  
-  
+
+
           <div class="card">
-            <HomeComp 
-            @goLeft=" goLeft()"
-            @goRight=" goRight()"
-            @goUp=" goUp()"
-            @goDown=" goDown()"
-            />
+            <HomeComp @goLeft=" goLeft()" @goRight=" goRight()" @goUp=" goUp()" @goDown=" goDown()" />
 
             <!-- <p>carta centrale</p> -->
             <!-- <button @click=" goLeft()"> back</button> -->
@@ -99,21 +133,22 @@ export default {
             <button @click="goUp()"> up</button>
             <button @click="goDown()"> Down</button> -->
           </div>
-  
+
           <div class="card">
             <button @click=" goCenterFromRight()"> back</button>
             <TestComp />
           </div>
         </div>
-  
+
         <div class="bottomContainer">
-  
+
           <div class="card">
             <p>carta sotto</p>
             <TestComp />
+
             <button @click="goCenterfromDown()"> up</button>
           </div>
-  
+
         </div>
       </div>
     </div>
@@ -130,17 +165,16 @@ p {
   cursor: pointer;
   background-color: blue;
 }
+
 .mainWrapper {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
+
 .mainContainer {
   transform: translate(-100vw, -100vh);
-  // position: absolute;
-  // top: -100vh;
-  // left: -100vw;
-  transition: all 1s ease-in-out;
+  transition: all 1s linear;
 
 }
 
@@ -160,6 +194,11 @@ p {
   transform: translate(100vw);
   display: flex;
   flex-wrap: nowrap;
+
+  height: 100%;
+  overflow-y: auto;
+  //permette alla card di scrollare
+
 }
 
 .card {

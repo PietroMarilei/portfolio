@@ -1,7 +1,7 @@
 /* // here's all animations 💞 */
 
 .goUp {
-  animation: goUp 1s ease-in-out forwards;
+  animation: goUp 0.4s ease-out forwards;
 }
 
 @keyframes goUp {
@@ -10,7 +10,7 @@
   }
 };
 .goDown {
-  animation: goDown 1s ease-in-out forwards;
+  animation: goDown 0.4s ease-out forwards;
 }
 
 @keyframes goDown {
@@ -21,31 +21,28 @@
 
 // -------------------------------------
 .goRight {
-  animation: goRight 1s ease-in-out forwards;
+  animation: goRight 0.4s ease-out forwards;
 }
 
 @keyframes goRight {
 
   100% {
-
     translate: -100vw 0;
   }
 };
 
 .goLeft {
-  animation: goLeft 1s ease-in-out forwards;
+  animation: goLeft 0.4s ease-out forwards;
 }
 
 @keyframes goLeft {
-
   100% {
-
     translate: 100vw 0;
   }
 };
-
+// -------------------------------------------
 .goCenterfromRight {
-  animation: goCenterfromRight 1s ease-in-out forwards;
+  animation: goCenterfromRight 0.4s ease-out forwards;
 }
 
 @keyframes goCenterfromRight {
@@ -59,7 +56,7 @@
 };
 
 .goCenterfromLeft {
-  animation: goCenterfromLeft 1s ease-in-out forwards;
+  animation: goCenterfromLeft 0.4s ease-out forwards;
 }
 
 @keyframes goCenterfromLeft {
@@ -72,7 +69,7 @@
   }
 };
 .goCenterfromUp {
-  animation: goCenterfromUp 1s ease-in-out forwards;
+  animation: goCenterfromUp 0.4s ease-out forwards;
 }
 
 @keyframes goCenterfromUp {
@@ -85,7 +82,7 @@
   }
 };
 .goCenterfromDown {
-  animation: goCenterfromDown 1s ease-in-out forwards;
+  animation: goCenterfromDown 0.4s ease-out forwards;
 }
 
 @keyframes goCenterfromDown {

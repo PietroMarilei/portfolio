@@ -19,14 +19,11 @@ export default {
   methods: {
 
   },
-  created() {
-    //  axios
-    //   .get("alinkGoesHere")
-    //   .then(response => {
-    //     store.someData = response.data
-    //     ;
-    //   })
-  },
+  mounted() {
+    // window.addEventListener('keyup', function (event) {
+    //   console.log(event.keyCode);
+    // });
+  }
 }
 </script>
 
