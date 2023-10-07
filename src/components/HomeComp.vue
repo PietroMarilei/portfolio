@@ -29,7 +29,8 @@ export default {
                 <div class="iconUp pulse">
                     <div class="keyBodyUp">
                         <div class="arrowUp">
-                            <i class="fa-solid fa-chevron-up "></i>
+                            &#9650;
+                            <!-- <i class="fa-solid fa-chevron-up "></i> -->
                         </div>
                     </div>
                 </div>
@@ -47,7 +48,8 @@ export default {
                 <div class="iconLeft pulse">
                     <div class="keyBodyLeft">
                         <div class="arrowLeft">
-                            <i class="fa-solid fa-chevron-left"></i>
+                            &#9664;
+                            <!-- <i class="fa-solid fa-chevron-left"></i> -->
                         </div>
                     </div>
 
@@ -61,7 +63,8 @@ export default {
                 <div class="iconRight pulse">
                     <div class="keyBodyRight">
                         <div class="arrowRight">
-                            <i class="fa-solid fa-chevron-right fa-beat-fade"></i>
+                            &#9654;
+                            <!-- <i class="fa-solid fa-chevron-right fa-beat-fade"></i> -->
                         </div>
                     </div>
 
@@ -82,7 +85,8 @@ export default {
                 <div class="iconDown pulse">
                     <div class="keyBodyDown">
                         <div class="arrowDown">
-                            <i class="fa-solid fa-chevron-down fa-fade"></i>
+                            &#9660;
+                            <!-- <i class="fa-solid fa-chevron-down fa-fade"></i> -->
                         </div>
                     </div>
                 </div>
@@ -92,10 +96,6 @@ export default {
             </div>
         </div>
         <h3 class="mx-2">use &#9664; to Contacts</h3>
-        <!-- <button @click="$emit('goLeft')"> back</button>
-            <button @click="$emit('goRight')"> next</button>
-            <button @click="$emit('goUp')"> up</button>
-            <button @click="$emit('goDown')"> Down</button> -->
 
     </div>
 </template>
@@ -152,7 +152,7 @@ h3 {
             width: 50px;
             height: 45px;
             border: 3px solid white;
-            border-radius: 3px;
+            // border-radius: 3px;
             position: relative;
 
             .arrowUp {
@@ -178,7 +178,7 @@ h3 {
             width: 45px;
             height: 50px;
             border: 3px solid white;
-            border-radius: 3px;
+            // border-radius: 3px;
             position: relative;
             margin: 1rem;
 
@@ -204,7 +204,7 @@ h3 {
             width: 45px;
             height: 50px;
             border: 3px solid white;
-            border-radius: 3px;
+            // border-radius: 3px;
             position: relative;
             margin: 1rem;
 
@@ -238,7 +238,7 @@ h3 {
             width: 50px;
             height: 45px;
             border: 3px solid white;
-            border-radius: 3px;
+            // border-radius: 3px;
             position: relative;
 
             .arrowDown {
@@ -263,8 +263,6 @@ h3 {
 .lineWrapper {
     width: 100%;
     margin: 0 2rem;
-
-
 }
 
 .verticalLine {

@@ -3,10 +3,12 @@ import TestComp from './TestComp.vue';
 import { store } from '../store';
 import { vShow } from 'vue';
 import HomeComp from './HomeComp.vue';
+import BioComponent from './BioComponent.vue'
 export default {
   components: {
     TestComp,
     HomeComp,
+    BioComponent,
   },
   data() {
     return {
@@ -55,6 +57,7 @@ export default {
   },
 
   mounted() {
+    // steamyMover here 🔀
     window.addEventListener('keyup', (event) => {
       console.log(event.keyCode);
       console.log((this.animationClass));
@@ -71,15 +74,13 @@ export default {
         if (key == '40') {
           if(this.animationClass !== 'goUp'){
             this.animationClass = 'goDown';
-
           } else {
             this.animationClass = 'goCenterfromUp';
           }
         } else
           if (key == '37') {
             if (this.animationClass !== 'goRight') {
-              this.animationClass = 'goLeft';
-  
+              this.animationClass = 'goLeft';  
             } else {
               this.animationClass = 'goCenterfromRight';
             }
@@ -102,17 +103,17 @@ export default {
   <!-- main template -->
   <main>
     <div class="mainWrapper">
+      <!-- here's go steamyMover animations  -->
       <div class="mainContainer" :class="this.animationClass">
+        <!-- up section -->
         <div class="topContainer">
 
           <div class="card">
-            <p>carta sopra</p>
-            <!-- <TestComp /> -->
-            <button @click="goCenterfromUp()"> Down</button>
+            <BioComponent @goCenterfromUp="goCenterfromUp()"/>
           </div>
 
         </div>
-
+        <!-- center 3 cards section -->
         <div class="centerContainer ">
           <div class="card">
             <TestComp />
@@ -123,15 +124,6 @@ export default {
           <div class="card">
             <HomeComp @goLeft=" goLeft()" @goRight=" goRight()" @goUp=" goUp()" @goDown=" goDown()" />
 
-            <!-- <p>carta centrale</p> -->
-            <!-- <button @click=" goLeft()"> back</button> -->
-
-
-            <!-- <TestComp /> -->
-            <!-- <button @click="goRight()"> next</button>
-  
-            <button @click="goUp()"> up</button>
-            <button @click="goDown()"> Down</button> -->
           </div>
 
           <div class="card">
@@ -139,7 +131,7 @@ export default {
             <TestComp />
           </div>
         </div>
-
+        <!-- bottom section -->
         <div class="bottomContainer">
 
           <div class="card">

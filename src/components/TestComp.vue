@@ -24,7 +24,6 @@ export default {
 <style lang="scss" scoped>
 
 .wrapper {
-
 display: flex;
 justify-content: space-between;
 border: 2px solid blue;
