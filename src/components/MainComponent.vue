@@ -4,11 +4,13 @@ import { store } from '../store';
 import { vShow } from 'vue';
 import HomeComp from './HomeComp.vue';
 import BioComponent from './BioComponent.vue'
+import SkillsComponent from './SkillsComponent.vue';
 export default {
   components: {
     TestComp,
     HomeComp,
     BioComponent,
+    SkillsComponent,
   },
   data() {
     return {
@@ -118,6 +120,7 @@ export default {
           <div class="card">
             <TestComp />
             <button @click=" goCenterfromLeft()"> back</button>
+            
           </div>
 
 
@@ -127,8 +130,8 @@ export default {
           </div>
 
           <div class="card">
-            <button @click=" goCenterFromRight()"> back</button>
-            <TestComp />
+     
+            <SkillsComponent @goCenterfromRight="goCenterFromRight()"/>
           </div>
         </div>
         <!-- bottom section -->
@@ -137,7 +140,7 @@ export default {
           <div class="card">
             <p>carta sotto</p>
             <TestComp />
-
+            
             <button @click="goCenterfromDown()"> up</button>
           </div>
 

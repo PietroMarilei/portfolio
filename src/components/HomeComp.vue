@@ -253,16 +253,17 @@ h3 {
 
 }
 
+
+
+.lineWrapper {
+    width: 100%;
+    margin: 0 2rem;
+}
 .line {
     width: 100%;
     height: 1px;
     border-top: 2px solid white;
 
-}
-
-.lineWrapper {
-    width: 100%;
-    margin: 0 2rem;
 }
 
 .verticalLine {
