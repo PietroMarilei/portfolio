@@ -129,9 +129,9 @@ export default {
 
           </div>
 
-          <div class="card">
-     
+          <div class="card ">
             <SkillsComponent @goCenterfromRight="goCenterFromRight()"/>
+     
           </div>
         </div>
         <!-- bottom section -->

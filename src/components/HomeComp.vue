@@ -103,7 +103,7 @@ export default {
 <style lang="scss" scoped>
 .container {
     flex-shrink: 0;
-    border: 2px solid rgb(130, 69, 162);
+    border: 2px solid #366686;
     border-radius: 5px;
     // --------------
     width: 100%;

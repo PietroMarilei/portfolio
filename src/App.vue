@@ -30,8 +30,7 @@ export default {
 <template>
 
   <!-- <HeaderComponent/> -->
-<div class="noiseBg">  
-</div>
+<div class="noiseBg"></div>
 <MainComponent/>
 
   <!-- <FooterComponent/> -->
@@ -50,7 +49,7 @@ export default {
     
   }
   body {
-  background-color: #111111;
+  background-color: #010c16;
   margin: 0;
   overflow-x: hidden;
 }
