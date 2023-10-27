@@ -252,9 +252,6 @@ h3 {
     }
 
 }
-
-
-
 .lineWrapper {
     width: 100%;
     margin: 0 2rem;
