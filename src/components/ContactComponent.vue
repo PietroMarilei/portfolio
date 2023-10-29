@@ -24,6 +24,7 @@ export default {
             <i class="fa-solid fa-file"></i>
         </a>
         
+        
     </div>
     <div class="pageRight" @click="$emit('goCenterfromLeft')">
         <div class="iconRight pulse">
