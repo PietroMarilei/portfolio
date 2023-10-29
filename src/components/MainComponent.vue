@@ -2,9 +2,17 @@
 import TestComp from './TestComp.vue';
 import { store } from '../store';
 import { vShow } from 'vue';
+import HomeComp from './HomeComp.vue';
+import BioComponent from './BioComponent.vue'
+import SkillsComponent from './SkillsComponent.vue';
+import ContactComponent from './ContactComponent.vue';
 export default {
   components: {
     TestComp,
+    HomeComp,
+    BioComponent,
+    SkillsComponent,
+    ContactComponent,
   },
   data() {
     return {
@@ -31,7 +39,8 @@ export default {
       console.log('goLeft');
       this.animationClass = 'goLeft'
     },
-// -----------------------------------------
+    // -----------------------------------------
+  
     goCenterFromRight() {
       console.log('goCenterFromRight');
       this.animationClass = 'goCenterfromRight'
@@ -52,7 +61,44 @@ export default {
   },
 
   mounted() {
+    // steamyMover here 🔀
+    window.addEventListener('keyup', (event) => {
+      console.log(event.keyCode);
+      console.log((this.animationClass));
 
+      let key = event.keyCode
+// il controllo parte dal tasto, se premo su, o sono sulla pagina centrale oppure su quella giú. Per verificare di essere nella pagina centrale basta verificare se il testo è diverso goDown che sarebbe il testo presente se fossi nella pagina giú. Quindi SE NON SONO nella pagina giú e sto premendo su vuol dire che sono al centro. SE SONO nella pagina giú, voglio tornare al centro da giú
+      if (key == '38') {
+        if(this.animationClass !== 'goDown'){
+          this.animationClass = 'goUp';
+        } else {
+          this.animationClass = 'goCenterfromDown';
+        }
+      } else
+        if (key == '40') {
+          if(this.animationClass !== 'goUp'){
+            this.animationClass = 'goDown';
+          } else {
+            this.animationClass = 'goCenterfromUp';
+          }
+        } else
+          if (key == '37') {
+            if (this.animationClass !== 'goRight') {
+              this.animationClass = 'goLeft';  
+            } else {
+              this.animationClass = 'goCenterfromRight';
+            }
+          }
+          else
+            if (key == '39') {
+              if (this.animationClass !== 'goLeft') {
+                this.animationClass = 'goRight';  
+              } else {
+                this.animationClass = 'goCenterfromLeft';
+    
+              }
+            }
+    });
   }
 }
 </script>
@@ -61,48 +107,46 @@ export default {
   <!-- main template -->
   <main>
     <div class="mainWrapper">
+      <!-- here's go steamyMover animations  -->
       <div class="mainContainer" :class="this.animationClass">
+        <!-- up section -->
         <div class="topContainer">
-  
+
           <div class="card">
-            <p>carta sopra</p>
-            <TestComp />
-            <button @click="goCenterfromUp()"> Down</button>
+            <BioComponent @goCenterfromUp="goCenterfromUp()"/>
           </div>
-  
+
         </div>
-  
+        <!-- center 3 cards section -->
         <div class="centerContainer ">
           <div class="card">
-            <TestComp />
-            <button @click=" goCenterfromLeft()"> back</button>
+            <ContactComponent @goCenterfromLeft="goCenterfromLeft()"/>
+            <!-- <TestComp />
+            <button @click=" goCenterfromLeft()"> back</button> -->
+            
           </div>
-  
-  
+
+
           <div class="card">
-            <p>carta centrale</p>
-            <button @click=" goLeft()"> back</button>
-            <TestComp />
-            <button @click="goRight()"> next</button>
-  
-            <button @click="goUp()"> up</button>
-            <button @click="goDown()"> Down</button>
+            <HomeComp @goLeft=" goLeft()" @goRight=" goRight()" @goUp=" goUp()" @goDown=" goDown()" />
+
           </div>
-  
-          <div class="card">
-            <button @click=" goCenterFromRight()"> back</button>
-            <TestComp />
+
+          <div class="card ">
+            <SkillsComponent @goCenterfromRight="goCenterFromRight()"/>
+     
           </div>
         </div>
-  
+        <!-- bottom section -->
         <div class="bottomContainer">
-  
+
           <div class="card">
             <p>carta sotto</p>
             <TestComp />
+            
             <button @click="goCenterfromDown()"> up</button>
           </div>
-  
+
         </div>
       </div>
     </div>
@@ -119,18 +163,16 @@ p {
   cursor: pointer;
   background-color: blue;
 }
+
 .mainWrapper {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
+
 .mainContainer {
   transform: translate(-100vw, -100vh);
-  // position: absolute;
-  // top: -100vh;
-  // left: -100vw;
-  transition: all 1s ease-in-out;
-  // overflow: hidden;
+  transition: all 1s linear;
 
 }
 
@@ -150,6 +192,11 @@ p {
   transform: translate(100vw);
   display: flex;
   flex-wrap: nowrap;
+
+  height: 100%;
+  overflow-y: auto;
+  //permette alla card di scrollare
+
 }
 
 .card {
@@ -159,7 +206,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px dashed rgb(255, 0, 0);
+  // border: 3px dashed rgb(255, 0, 0);
   padding: 1rem;
 
 }

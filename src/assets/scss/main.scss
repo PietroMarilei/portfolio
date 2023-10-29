@@ -3,6 +3,30 @@
 @use "partials/mixins.scss" as *;
 
 body {
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Fira Code', monospace;
+   // font-family: 'Montserrat', sans-serif;
+   // font-family: 'Space Mono', monospace;
+   // font-family: 'Roboto Mono', monospace;
     
+}
+.d-flex {
+   display: flex;
+   align-items: center;
+}
+
+.d-block {
+   display: block;
+}
+
+.d-inline {
+   display: inline;
+}
+.d-none {
+   display: none;
+}
+.mx-2 {
+   margin:0 2rem 
+}
+.text-align-end {
+   text-align: end;
 }
