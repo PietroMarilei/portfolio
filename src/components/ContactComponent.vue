@@ -1,15 +1,25 @@
 <script>
 import { store } from '../store';
+import emailjs from 'emailjs-com';
 
 export default {
     data() {
         return {
-            greeting: 'Hello World!',
             store,
+            to: "",
+            subject: "",
+            body: "",
         }
     },
     methods: {
-
+        sendEmail() {
+            emailjs.sendForm('service_7pcawhq', "template_mvv9u1v", this.$refs.form, 'hwfa9NZauEuT06LJ7')
+                .then((result) => {
+                    console.log('EMAIL -> SUCCESS!', result.text);
+                }, (error) => {
+                    console.log('EMAIL -> FAILED...', error.text);
+                });
+        }
     },
 }
 </script>
@@ -26,6 +36,17 @@ export default {
         
         
     </div>
+    <!-- form-------------- -->
+     <form ref="form" @submit.prevent="sendEmail">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+      </form>
+      <!-- ----------------- -->
     <div class="pageRight" @click="$emit('goCenterfromLeft')">
         <div class="iconRight pulse">
             <div class="keyBodyRight">
@@ -38,6 +59,8 @@ export default {
         </div>
         <div class="verticalLine"></div>
     </div>
+
+   
 </template>
 
 <style lang="scss" scoped>
