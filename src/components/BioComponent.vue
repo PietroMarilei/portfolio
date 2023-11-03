@@ -55,7 +55,6 @@ export default {
                 </p> -->
 
                 <p>
-                    aaaaa
                     Hey there! I've been into problem-solving and connecting with people ever since I was a kid. I love to disassembly Legos and exploring how and why things worked around me.
 
                     Growing up, I discovered a more powerful toy: the computer. I used it for both gaming and experimenting with photo editing through Photoshop. This shaped a my connection with the digital world and creativity.
@@ -90,7 +89,7 @@ export default {
 
             </div>
             <div class="imgWrapper">
-                <img src="../assets/img/profilePhoto.jpg" alt="a">
+                <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a">
 
             </div>
         </div>
@@ -159,7 +158,7 @@ export default {
             border: 2px solid rgb(143, 143, 143);
             padding: 0.4rem;
             border-radius: 3px;
-            filter: grayscale(30%);
+            
         }
     }
 }
