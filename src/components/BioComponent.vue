@@ -89,7 +89,7 @@ export default {
 
             </div>
             <div class="imgWrapper">
-                <img src="../assets/img/profile photo.jpg" alt="a">
+                <img src="../assets/img/profilePhoto.jpg" alt="a">
 
             </div>
         </div>
