@@ -44,14 +44,10 @@ export default {
   @import './assets/scss/partials/animations.scss';
   
   body {
-    background-color: rgb(0, 0, 0);
+    background-color: #010c16;
     color: rgb(255, 255, 255);
-    
-  }
-  body {
-  background-color: #010c16;
-  margin: 0;
-  overflow-x: hidden;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .noiseBg {
