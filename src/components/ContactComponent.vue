@@ -3,12 +3,10 @@ import { store } from '../store';
 import emailjs from 'emailjs-com';
 
 export default {
+    emits: ['goCenterfromLeft'],
     data() {
         return {
             store,
-            to: "",
-            subject: "",
-            body: "",
         }
     },
     methods: {
@@ -25,28 +23,32 @@ export default {
 </script>
 
 <template>
-    <div class="contacts">
-        <a href="">
-            <i class="fa-brands fa-git-alt"></i>
-        </a>
+    <div class="ideCont">
+        <!-- form-------------- -->
+        <form ref="form" @submit.prevent="sendEmail">
+            <div class="container">
+                <input type="text" name="user_name" class="d-block" placeholder="name">
+                <input type="email" name="user_email" class="d-block" placeholder="surname">
+            </div>
+            <textarea name="message"  placeholder="Type your message."></textarea>
+            <div class="lowerForm d-flex">        
+                <input type="submit" value="Send">
+            </div>
+        </form>
+        <!-- ----------------- -->
+        <div class="contacts">
+            <a href="">
+                <i class="fa-brands fa-git-alt"></i>
+            </a>
+    
+            <a href="">
+                <i class="fa-solid fa-file"></i>
+            </a>
+            
+            
+        </div>
 
-        <a href="">
-            <i class="fa-solid fa-file"></i>
-        </a>
-        
-        
     </div>
-    <!-- form-------------- -->
-     <form ref="form" @submit.prevent="sendEmail">
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-      </form>
-      <!-- ----------------- -->
     <div class="pageRight" @click="$emit('goCenterfromLeft')">
         <div class="iconRight pulse">
             <div class="keyBodyRight">
@@ -64,9 +66,22 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.contacts {
+form {
     display: flex;
     justify-content: center;
+    * {
+        margin: 1rem;
+    }
+}
+.ideCont {
+    margin: 2rem;
+    padding: 2rem;
+    border: 2px solid #366686;
+    border-radius: 5px;
+}
+.contacts {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 
     i {
