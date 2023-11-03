@@ -259,12 +259,12 @@ h3 {
 .line {
     width: 100%;
     height: 1px;
-    border-top: 2px solid white;
+    border-top: 2px solid #366686;
 
 }
 
 .verticalLine {
     height: 100px;
-    border-left: 3px solid white;
+    border-left: 3px solid #366686;
 }
 </style>

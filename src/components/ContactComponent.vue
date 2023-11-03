@@ -14,6 +14,7 @@ export default {
         sendEmail() {
             emailjs.sendForm('service_7pcawhq', "template_mvv9u1v", this.$refs.form, 'hwfa9NZauEuT06LJ7')
                 .then((result) => {
+                    this.emailSent = true;
                     console.log('EMAIL -> SUCCESS!', result.text);
                 }, (error) => {
                     console.log('EMAIL -> FAILED...', error.text);
@@ -28,6 +29,7 @@ export default {
         <div class="topSec">
             <h4>#Contact me here &#9660;</h4>
         </div>
+        
         <!-- form-------------- -->
         <div class="formContainer">
             <form ref="form" @submit.prevent="sendEmail">
@@ -45,8 +47,9 @@ export default {
                     <label for="">_say Hi:</label>
                     <textarea name="message" placeholder="Type your message." class="textArea"></textarea>
                 </div>
-                <div class="lowerForm d-flex">
+                <div class="lowerForm">
                     <input type="submit" value="Send">
+                    <p :class="this.emailSent ? '': 'd-none'">Message Sent!</p>
                 </div>
             </form>
         </div>
@@ -84,8 +87,8 @@ export default {
 .formContainer {
     height: 93%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -107,6 +110,8 @@ form {
     textarea {
         border: 2px solid #366686;
         border-radius: 5px;
+        padding: 0.3rem;
+        color: white;
         // ??
         width: 103%;
         background-color: #010c16;
@@ -115,6 +120,14 @@ form {
         width: unset;
         padding: 0.3rem 0.5rem;
         background-color: #192f44;
+    }
+    .lowerForm {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            text-align: end;
+        }
     }
 }
 
@@ -187,11 +200,11 @@ form {
 .line {
     width: 100%;
     height: 1px;
-    border-top: 2px solid white;
+    border-top: 2px solid #366686;
 
 }
 
 .verticalLine {
     height: 100px;
-    border-left: 3px solid white;
+    border-left: 3px solid #366686;
 }</style>
