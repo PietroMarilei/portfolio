@@ -55,6 +55,7 @@ export default {
                 </p> -->
 
                 <p>
+                    aaaaa
                     Hey there! I've been into problem-solving and connecting with people ever since I was a kid. I love to disassembly Legos and exploring how and why things worked around me.
 
                     Growing up, I discovered a more powerful toy: the computer. I used it for both gaming and experimenting with photo editing through Photoshop. This shaped a my connection with the digital world and creativity.
