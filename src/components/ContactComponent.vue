@@ -7,7 +7,8 @@ export default {
     data() {
         return {
             store,
-            emailSent : false
+            emailSent: false,
+            selectedTab: 0
         }
     },
     methods: {
@@ -27,11 +28,24 @@ export default {
 <template>
     <div class="ideCont">
         <div class="topSec">
-            <h4>#Contact me here &#9660;</h4>
+            <ul class="d-flex">
+                <li @click="this.selectedTab = 0" :class="this.selectedTab != 0 ? 'greyed' : ''">
+                    <h6>⋗ Contact me here &#9660;</h6>
+                </li>
+                <li @click="this.selectedTab = 1" :class="this.selectedTab != 1 ? 'greyed' : ''">
+                    <h6> ⇒ my Git-Hub &#9660;</h6>
+                </li>
+                <li @click="this.selectedTab = 2" :class="this.selectedTab != 2 ? 'greyed' : ' '">
+                    <h6>⋧ my Linkedin &#9660;</h6>
+                </li>
+                <li @click="this.selectedTab = 3" :class="this.selectedTab != 3 ? 'greyed' : ''">
+                    <h6>≥ my resume &#9660;</h6>
+                </li>
+            </ul>
         </div>
-        
+
         <!-- form-------------- -->
-        <div class="formContainer">
+        <div class="innerContainer" :class="this.selectedTab == 0 ? '' : 'd-none'">
             <form ref="form" @submit.prevent="sendEmail">
                 <div s>
                     <label for="">_your name:</label>
@@ -42,20 +56,48 @@ export default {
                     <label for="">_your e-mail:</label>
                     <input type="email" name="user_email" class="d-block" placeholder="type your email">
                 </div>
-                
+
                 <div class="d-block">
                     <label for="">_say Hi:</label>
                     <textarea name="message" placeholder="Type your message." class="textArea"></textarea>
                 </div>
                 <div class="lowerForm">
                     <input type="submit" value="Send">
-                    <p :class="this.emailSent ? '': 'd-none'">Message Sent!</p>
+                    <p :class="this.emailSent ? '' : 'd-none '">Message Sent!</p>
                 </div>
             </form>
         </div>
 
         <!-- ----------------- -->
 
+        <!-- Git-Hub down here -->
+        <div class="innerContainer" :class="this.selectedTab == 1 ? '' : 'd-none'">
+            <p>
+                Check my git-hub here ->
+            </p>
+            <a href="https://github.com/PietroMarilei" class="d-flex" target="_blank">
+                <i class="fa-brands fa-git-alt"></i> <span>github.com/PietroMarilei</span>
+            </a>
+        </div>
+
+        <!-- linkedin down here -->
+        <div class="innerContainer" :class="this.selectedTab == 2 ? '' : 'd-none'">
+            <p>
+                Check my Linkedin here ->
+            </p>
+            <a href="www.linkedin.com/in/pietromarilei" class="d-flex" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> <span>linkedin/pietromarilei</span>
+            </a>
+        </div>
+        <!-- resume here -->
+        <div class="innerContainer" :class="this.selectedTab == 3 ? '' : 'd-none'">
+                <p>
+                    Download my resume here ->
+                </p>
+                <a href="../assets/Pietro Marilei - Web Developer 3.pdf" class="d-flex">
+                    <i class="fa-solid fa-file"></i> <span>My resume</span>
+                </a>
+            </div>
     </div>
     <div class="pageRight" @click="$emit('goCenterfromLeft')">
         <div class="iconRight pulse">
@@ -70,35 +112,45 @@ export default {
         <div class="verticalLine"></div>
     </div>
 
-    <!-- <div class="contacts">
-                <a href="">
-                    <i class="fa-brands fa-git-alt"></i>
-                </a>
-    
-                <a href="">
-                    <i class="fa-solid fa-file"></i>
-                </a>
-            
-            
-            </div> -->
 </template>
 
 <style lang="scss" scoped>
-.formContainer {
+@use "../assets/scss/partials/variables.scss" as *;
+.innerContainer {
     height: 93%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a { 
+
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+        color : $third-color;
+
+        i {
+            margin: 0 1rem;
+            font-size: 2rem;
+        }
+    }
+
+    a:hover {
+        span {
+            text-decoration: underline;
+        }
+    }
 }
 
 form {
     label {
         font-size: 0.8rem;
     }
+
     input {
         all: unset;
         display: block;
-         width: 100%;
+        width: 100%;
         font-size: 0.8rem;
         padding: 0.3rem;
         margin: 0.5rem 0;
@@ -107,6 +159,7 @@ form {
         border-radius: 5px;
         background-color: #010c16;
     }
+
     textarea {
         border: 2px solid #366686;
         border-radius: 5px;
@@ -116,15 +169,18 @@ form {
         width: 103%;
         background-color: #010c16;
     }
+
     input[type="submit"] {
         width: unset;
         padding: 0.3rem 0.5rem;
         background-color: #192f44;
     }
+
     .lowerForm {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         p {
             text-align: end;
         }
@@ -147,64 +203,22 @@ form {
     margin: 0 auto;
     border-bottom: 2px solid #366686;
 
-    h4 {
+    .greyed {
+        color: #366686;
+    }
+
+    h6 {
         padding: 2rem;
         padding-top: 0.5rem;
+        padding-left: 1rem;
         padding-bottom: 0.5rem;
-        font-weight: 600;
-        font-size: larger;
+        font-weight: 300;
+        font-size: 1rem;
+        border-right: 2px solid #366686;
+
     }
 }
 
-.contacts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    i {
-        font-size: 3rem;
-    }
-}
 
-.pageRight {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
-
-    .iconRight {
-        .keyBodyRight {
-            width: 45px;
-            height: 50px;
-            border: 3px solid white;
-            // border-radius: 3px;
-            position: relative;
-            margin: 1rem;
-
-            .arrowRight {
-                position: absolute;
-                top: 50%;
-                left: 49%;
-                transform: translate(-50%, -50%);
-                font-size: 1.5rem;
-            }
-        }
-    }
-}
-
-.lineWrapper {
-    width: 100%;
-    margin: 0 2rem;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-top: 2px solid #366686;
-
-}
-
-.verticalLine {
-    height: 100px;
-    border-left: 3px solid #366686;
-}</style>
+</style>

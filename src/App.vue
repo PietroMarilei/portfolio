@@ -38,8 +38,8 @@ export default {
 </template>
 
 <style lang="scss">
-  @use "./assets/scss/partials/variables.scss" as *;
   @import "./assets/scss/main.scss";
+ @import "./assets/scss/partials/variables.scss";
   @import './assets/scss/partials/reset.scss';
   @import './assets/scss/partials/animations.scss';
   
