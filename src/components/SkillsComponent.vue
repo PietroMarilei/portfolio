@@ -7,112 +7,68 @@ export default {
         return {
             store,
             isActive: 0,
-            skills: [
-                {
-                    name: 'HTML',
-                    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: '(S)CSS',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'Bootstrap',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'Javascript',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-              
-                {
-                    name: 'Vue.js',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'PHP',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'SQL',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'Laravel',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                {
-                    name: 'Git',
-                    description: 'CSSSSSSSSLorem ipsum, dolor sit amet consectetur adipisicing elit. Quas dolor maxime distinctio reprehenderit alias repudiandae! Esse, vero doloremque! Maxime, necessitatibus? Minima, temporibus! Natus accusantium sunt velit porro, et voluptatum sint?',
-                    icon: '',
-                },
-                
-            ],
+
         };
     },
     methods: {
         showOnclick(i) {
             this.isActive = i
-        }   
+        }
     },
 }
 </script>
 
 <template>
-    
-        <div class="pageLeft" @click="$emit('goCenterfromRight')">
-            <div class="verticalLine"></div>
+    <div class="pageLeft" @click="$emit('goCenterfromRight')">
+        <div class="verticalLine"></div>
 
-            <div class="iconLeft pulse">
-                <div class="keyBodyLeft">
-                    <div class="arrowLeft">
-                        &#9664;
-                    </div>
+        <div class="iconLeft pulse">
+            <div class="keyBodyLeft">
+                <div class="arrowLeft">
+                    &#9664;
                 </div>
-
             </div>
+
         </div>
+    </div>
 
-        <div class="skillsContainer">
+    <div class="skillsContainer">
 
-            <div class="ideCont">
-                <div class="topSec">
-                    <h4>#Skills</h4>
-                </div>
+        <div class="ideCont">
+            <div class="topSec">
+                <h6>&#x2632; My Skills</h6>
+            </div>
 
-                <div class="middleSec">
-                    <div class="col-left">
-                        <ul>
-                            <li v-for="(singleSkill, i) in skills" :key="i" class="d-flex"
-                            @click="showOnclick(i)">
-                            <div v-if="isActive == i" class="d-inline">
-                                v &nbsp;
+            <div class="middleSec">
+                <div class="col-left">
+                    <ul>
+                        <li v-for="(singleSkill, i) in this.store.skills" :key="i" class="d-flex align-items-center" @click="showOnclick(i)">
+                            <div v-if="isActive == i" class="">
+                                ⧪ ₪ &nbsp;
                             </div>
                             <div v-else>
-                                .
+                                <i :class="singleSkill.icon"></i>&nbsp
+                                <!-- ₪ &nbsp -->
                             </div>
-                        {{ singleSkill.name }}</li>                 
-                        </ul>
+                            {{ singleSkill.name }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-right">
+                    <div v-for="(singleSkill, i) in this.store.skills" :key="i" @click="showOnclick(i)" class="thumb" :class="isActive == i ? 'active ' : 'unselected'">
+                        {{ singleSkill.description }}
+
+                        <!-- <img :src="singleSkill.icon" alt=""> -->
+
+                        <i :class="singleSkill.icon"></i>
+
                     </div>
 
-                    <div class="col-right">
-                        <p v-for="(singleSkill, i) in skills" :key="i" @click="showOnclick(i)" class="thumb"
-                                :class="isActive == i ? 'active ' : 'unselected'">
-                            {{singleSkill.description}}
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
-  
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -126,32 +82,6 @@ export default {
     justify-content: start;
 }
 
-.pageLeft {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
-
-    .iconLeft {
-        .keyBodyLeft {
-            width: 45px;
-            height: 50px;
-            border: 3px solid white;
-            // border-radius: 3px;
-            position: relative;
-            margin: 1rem;
-
-            .arrowLeft {
-                position: absolute;
-                top: 50%;
-                left: 49%;
-                transform: translate(-50%, -50%);
-                font-size: 1.5rem;
-            }
-        }
-    }
-}
-
 .ideCont {
     margin: 2rem;
     padding-top: 0;
@@ -161,16 +91,20 @@ export default {
 
 .topSec {
     width: 100%;
-    text-align: center;
+    text-align: start;
     margin: 0 auto;
     border-bottom: 2px solid #366686;
 
-    h4 {
-        padding: 3rem;
+    h6 {
+        width: 20%;
+        padding: 2rem;
         padding-top: 0.5rem;
+        padding-left: 1rem;
         padding-bottom: 0.5rem;
-        font-weight: 600;
-        font-size: larger;
+        font-weight: 300;
+        font-size: 1rem;
+        border-right: 2px solid #366686;
+
     }
 }
 
@@ -183,7 +117,7 @@ export default {
         border-right: 2px solid #366686;
 
         ul {
-            padding: 0.8rem;
+            padding: 1rem;
             font-weight: 500;
 
             li {
@@ -195,6 +129,7 @@ export default {
     .col-right {
         width: 80%;
         padding: 0.8rem;
+
         * {
             transition: all 0.5s ease-in-out;
 
@@ -206,6 +141,7 @@ export default {
     height: 0;
     opacity: 0;
 }
+
 .active {
     height: 100%;
     opacity: 100%;
@@ -218,22 +154,5 @@ export default {
     justify-content: center;
 
 
-}
-
-.lineWrapper {
-    width: 100%;
-    margin: 0 2rem;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-top: 2px solid #366686;
-
-}
-
-.verticalLine {
-    height: 100px;
-    border-left: 3px solid #366686;
 }
 </style>

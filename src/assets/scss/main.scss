@@ -13,7 +13,12 @@ body {
    display: flex;
    align-items: center;
 }
-
+.align-items-center {
+   align-items: center;
+}
+.justify-content-center {
+   justify-content: center;
+}
 .d-block {
    display: block;
 }
@@ -33,7 +38,7 @@ body {
 .violet {
    color: #6d3a89
 }
-// test
+// all navigator arrows
 .pageUp {
     padding: 0 1rem;
     position: relative;

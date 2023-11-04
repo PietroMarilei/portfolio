@@ -157,7 +157,7 @@ form {
         padding-right: 0;
         border: 2px solid #366686;
         border-radius: 5px;
-        background-color: #010c16;
+        background-color: none;
     }
 
     textarea {
