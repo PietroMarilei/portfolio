@@ -7,14 +7,19 @@ export default {
         return {
             store,
             isActive: 0,
-
+            typedText: "",
         };
     },
     methods: {
         showOnclick(i) {
-            this.isActive = i
-        }
+            this.isActive = i;
+        },
+      
     },
+    mounted() {
+
+    },
+    
 }
 </script>
 
@@ -42,9 +47,9 @@ export default {
             <div class="middleSec">
                 <div class="col-left">
                     <ul>
-                        <li v-for="(singleSkill, i) in this.store.skills" :key="i" class="d-flex align-items-center" @click="showOnclick(i)">
+                        <li v-for="(singleSkill, i) in this.store.skills" :key="i" class="d-flex align-items-center" @click="showOnclick(i); startTypewriter(singleSkill.description)">
                             <div v-if="isActive == i" class="">
-                                ⧪ ₪ &nbsp;
+                                &#8594; &nbsp;
                             </div>
                             <div v-else>
                                 <i :class="singleSkill.icon"></i>&nbsp
@@ -56,13 +61,16 @@ export default {
                 </div>
 
                 <div class="col-right">
-                    <div v-for="(singleSkill, i) in this.store.skills" :key="i" @click="showOnclick(i)" class="thumb" :class="isActive == i ? 'active ' : 'unselected'">
-                        {{ singleSkill.description }}
+                    <div v-for="(singleSkill, i) in this.store.skills" :key="i" @click="showOnclick(i)" class="langDescription" :class="isActive == i ? 'active ' : 'unselected'">
+                        <div class="fakeFunc">
+                            <span>function</span> <span>I_code_with(<span>{{ singleSkill.name }}</span>)</span> <span>{</span>
 
-                        <!-- <img :src="singleSkill.icon" alt=""> -->
+                            <p class="typing-demo">{{ singleSkill.description }}</p> <span>}</span>
+                        </div>
 
-                        <i :class="singleSkill.icon"></i>
-
+                        <div class="langIcon">
+                            {<i :class="singleSkill.icon"></i>}
+                        </div>
                     </div>
 
                 </div>
@@ -72,6 +80,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables.scss' as *;
+
 .container {
     flex-shrink: 0;
     border: 2px solid #366686;
@@ -83,6 +93,7 @@ export default {
 }
 
 .ideCont {
+    height: 100%;
     margin: 2rem;
     padding-top: 0;
     border: 2px solid #366686;
@@ -96,12 +107,12 @@ export default {
     border-bottom: 2px solid #366686;
 
     h6 {
-        width: 20%;
+        width: 30%;
         padding: 2rem;
         padding-top: 0.5rem;
         padding-left: 1rem;
         padding-bottom: 0.5rem;
-        font-weight: 300;
+        font-weight: 500;
         font-size: 1rem;
         border-right: 2px solid #366686;
 
@@ -112,14 +123,16 @@ export default {
     display: flex;
 
     .col-left {
-        width: 20%;
-        height: calc(100vh - 6rem);
+        width: 30%;
+        // height: calc((100vh * 0.7) - 4rem);
+        // height: 100%;
         border-right: 2px solid #366686;
+        padding: 2rem;
+        padding-left: 1rem;
 
         ul {
-            padding: 1rem;
-            font-weight: 500;
-
+            cursor: pointer;
+            font-weight: 300;
             li {
                 margin-bottom: 0.3rem;
             }
@@ -127,32 +140,73 @@ export default {
     }
 
     .col-right {
-        width: 80%;
-        padding: 0.8rem;
+        height: 100%;
+        width: 70%;
+        padding: 2rem;
+        padding-bottom: 0;
 
         * {
             transition: all 0.5s ease-in-out;
+        }
+
+        .langDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+
+            .fakeFunc {
+                span:first-child {
+                    color: $third-color;
+                }
+
+                span:nth-child(2) {
+                    color: rgb(128, 221, 240);
+
+                    span {
+                        color: rgb(255, 109, 77)
+                    }
+                }
+
+                span:nth-child(3),
+                span:nth-child(5) {
+                    color: gold;
+                }
+
+                p {
+                    text-align: justify;
+                    margin: 0.5rem 0;
+                    margin-left: 5rem;
+                }
+            }
+
+            .langIcon {
+                font-size: 3rem;
+                text-align: end;
+            }
 
         }
     }
 }
 
 .unselected {
-    height: 0;
-    opacity: 0;
+    opacity: 0%;
+
+    * {
+        display: none;
+    }
 }
 
-.active {
-    height: 100%;
+.active {  
     opacity: 100%;
-
 }
 
 .skillsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
+    // height: 70%;
 }
+
+
 </style>
