@@ -9,7 +9,7 @@ export default {
         }
     },
     methods: {
-       
+
     },
     mounted() {
     }
@@ -18,33 +18,32 @@ export default {
 
 <template>
     <div class="container">
-        <div class="skillsContainer">
-    
-            <div class="ideCont">
-                <div class="topSec">
-                    <h6>Who Am I</h6>
-                </div>
-    
-                <div class="middleSec">
-                    <div class="col-left">
-                        <div class="imgWrapper">
-                    <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a">
-    
-                </div>
-                    </div> 
-                    <div class="col-right">
-                        Hey there! I've been into problem-solving and connecting with people ever since I was a kid. I love to disassembly Legos and exploring how and why things worked around me.
-    
-                        Growing up, I discovered a more powerful toy: the computer. I used it for both gaming and experimenting with photo editing through Photoshop. This shaped a my connection with the digital world and creativity.
-    
-                        As I matured, I decided to take my passion for digital art to the next level. I delved into digital painting, using the powerful digital medium to communicate uniquely. Beside a passion for game design this became a full time job in the world of tabletop role playing games.
-    
-                        The journey didn't stop there. It evolved into coding, becoming my direct language with machines. Coding opened up a world of possibilities, allowing me to translate my creative concepts even more precisely and powerfully. Now, my life is an intersection of problem-solving, digital painting, and coding where the passion for communication blends with the magic of the digital realm.
+
+        <div class="ideCont">
+            <div class="topSec">
+                <h6>&#x2632; About Me</h6>
+            </div>
+
+            <div class="middleSec">
+                <div class="col-left">
+                    <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
+
+                    <div class="glitch" style="">
+                        <div class="channel r"></div>
+                        <div class="channel g"></div>
+                        <div class="channel b"></div>
                     </div>
+
+                    
+                </div>
+
+                <div class="col-right">
+                    <p>
+                        Trained by a childhood filled with &#8883; Legos, I love finding practical solutions to bring things together &#8904;. Code ䷃ for me is the perfect 'dojo' to unleash my logic and imagination, always with an &#128065; eye for design.
+                    </p>
                 </div>
             </div>
         </div>
-   
 
 
         <div class="lowerSection">
@@ -69,83 +68,49 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/partials/variables.scss'as *;
+@use '../assets/scss/partials/variables.scss' as *;
 
-#movableDiv {
-    position: absolute;
-    padding: 1rem;
-    border: 2px dashed red;
-}
 .container {
     width: 100%;
     height: 100%;
-    border: 2px solid rgb(130, 69, 162);
-    border-radius: 5px;
-    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    h2 {
-        padding: 0rem 1rem;
-    }
-}
-
-.bioCont {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    .leftBio {
-        padding: 1rem 0;
-        p {
-            padding: 1rem 0;
-        }
-    }
-
-    .imgWrapper {
-        width: 500%;
-        padding: 1rem;
-        img {
-            border: 2px solid rgb(143, 143, 143);
-            padding: 0.4rem;
-            border-radius: 3px;   
-        }
-    }
-}
-
-h3 {
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.downWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .ideCont {
-    height: 100%;
     margin: 2rem;
     padding-top: 0;
     border: 2px solid #366686;
     border-radius: 5px;
-}
 
-.topSec {
-    width: 100%;
-    text-align: start;
-    margin: 0 auto;
-    border-bottom: 2px solid #366686;
+    .topSec {
+        width: 100%;
+        text-align: start;
+        margin: 0 auto;
+        border-bottom: 2px solid #366686;
 
-    h6 {
-        width: 30%;
+        h6 {
+            width: 30%;
+            padding: 2rem;
+            padding-top: 0.5rem;
+            padding-left: 1rem;
+            padding-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            border-right: 2px solid #366686;
+        }
+    }
+
+    .col-right {
+        height: 100%;
+        width: 70%;
         padding: 2rem;
-        padding-top: 0.5rem;
-        padding-left: 1rem;
-        padding-bottom: 0.5rem;
-        font-weight: 500;
-        font-size: 1rem;
-        border-right: 2px solid #366686;
+
+        p {
+            text-align: justify;
+        }
     }
 }
 
@@ -154,18 +119,167 @@ h3 {
 
     .col-left {
         width: 30%;
+        // height: calc((100vh * 0.7) - 4rem);
         border-right: 2px solid #366686;
         padding: 2rem;
-        padding-left: 1rem;
-
     }
 
-    .col-right {
-        height: 100%;
-        width: 70%;
-        padding: 2rem;
-        padding-bottom: 0;
-
+    img {
+        width: 300%;
     }
+}
+
+.downWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lowerSection {
+    position: absolute;
+    width: 100%;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+// -img glitch 
+
+@function rand($min, $max) {
+  @return random() * ($max - $min) + $min;
+}
+
+$animation-duration: 3s;
+$glitch-duration: 20%;
+$glitch-frequency: 10;
+$glitch-interval: $glitch-duration / $glitch-frequency;
+
+@mixin rgb-shift($name) {
+  @keyframes rgb-shift-#{$name} {
+    @for $i from 0 to $glitch-frequency {
+      #{$i * $glitch-interval} {
+        transform: translate(
+          #{rand(-2, 2) * 1%},
+          #{rand(-0.5, 0.5) * 1%}
+        );
+      }
+    }
+
+    #{$glitch-duration}, 100% {
+      transform: none;
+    }
+  }
+
+  animation: rgb-shift-#{$name} $animation-duration steps(1, jump-end) infinite alternate both;
+}
+
+@mixin glitch($name) {
+  @keyframes glitch-#{$name} {
+    @for $i from 0 to $glitch-frequency {
+      $left: 0%;
+      $right: 100%;
+      $top: rand(0, 90) * 1%;
+      $bottom: $top + rand(1, 10) * 1%;
+
+      #{$i * $glitch-interval} {
+        clip-path: polygon(
+          $left $top,
+          $right $top,
+          $right $bottom,
+          $left $bottom
+        );
+        transform: translate(
+          #{rand(-8, 8) * 1%},
+          #{rand(-0.5, 0.5) * 1%}
+        );
+      }
+    }
+
+    #{$glitch-duration}, 100% {
+      clip-path: none;
+      transform: none;
+    }
+  }
+
+  animation: glitch-#{$name} $animation-duration linear infinite alternate both;
+}
+
+body {
+  margin: 0;
+}
+
+.glitch {
+  background: #000 no-repeat center;
+  background-image: url(../assets/img/FotoCv_SQUARE2.jpg) ;
+  background-size: 0;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after,
+  .channel {
+    background: inherit;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &::before {
+    @include glitch(before);
+    content: "";
+  }
+
+  &::after {
+    @include glitch(after);
+    content: "";
+  }
+
+  .channel {
+    mix-blend-mode: screen;
+
+    &::before {
+      bottom: 0;
+      content: "";
+      display: block;
+      mix-blend-mode: multiply;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .r {
+    @include rgb-shift(r);
+
+    &::before {
+      background: #f00;
+    }
+  }
+
+  .g {
+    @include rgb-shift(g);
+
+    &::before {
+      background: #0f0;
+    }
+  }
+
+  .b {
+    @include rgb-shift(b);
+
+    &::before {
+      background: #00f;
+    }
+  }
 }
 </style>
