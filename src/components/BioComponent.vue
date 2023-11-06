@@ -39,7 +39,8 @@ export default {
 
                 <div class="col-right">
                     <p>
-                        Trained by a childhood filled with &#8883; Legos, I love finding practical solutions to bring things together &#8904;. Code ䷃ for me is the perfect 'dojo' to unleash my logic and imagination, always with an &#128065; eye for design.
+                        Trained by a childhood filled with &#8883; Legos, I love finding practical solutions to bring things together &#8904;. <br>
+                        The code ䷃ is for me the perfect 'dojo' to unleash my logic and imagination, always with an &#128065; eye for design.
                     </p>
                 </div>
             </div>

@@ -63,7 +63,7 @@ export default {
                 <div class="col-right">
                     <div v-for="(singleSkill, i) in this.store.skills" :key="i" @click="showOnclick(i)" class="langDescription" :class="isActive == i ? 'active ' : 'unselected'">
                         <div class="fakeFunc">
-                            <span>function</span> <span>I_code_with(<span>{{ singleSkill.name }}</span>)</span> <span>{</span>
+                            <span>function</span> <span>I_Can(<span>{{ singleSkill.name }}</span>)</span> <span>{</span>
 
                             <p class="typing-demo">{{ singleSkill.description }}</p> <span>}</span>
                         </div>
