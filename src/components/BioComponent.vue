@@ -27,12 +27,14 @@ export default {
             <div class="middleSec">
                 <div class="col-left">
                     <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
-
+                  <div class="imgWrapper">
                     <div class="glitch" style="">
                         <div class="channel r"></div>
                         <div class="channel g"></div>
                         <div class="channel b"></div>
                     </div>
+
+                  </div>
 
                     
                 </div>
@@ -117,7 +119,20 @@ export default {
     }
 }
 
+.middleSec {
+    display: flex;
 
+    .col-left {
+        width: 30%;
+        // height: calc((100vh * 0.7) - 4rem);
+        border-right: 2px solid #366686;
+        padding: 2rem;
+    }
+
+    img {
+        width: 300%;
+    }
+}
 
 .downWrapper {
     display: flex;
@@ -138,7 +153,11 @@ export default {
     }
 }
 // 📸 #region img animation
-
+.imgWrapper{
+  padding: 0.5rem;
+  border: 2px solid #3666867b;
+ 
+}
 @function rand($min, $max) {
   @return random() * ($max - $min) + $min;
 }
@@ -146,7 +165,7 @@ export default {
 $animation-duration: 3s;
 $glitch-duration: 20%;
 $glitch-frequency: 10;
-$glitch-interval: $glitch-duration / $glitch-frequency;
+$glitch-interval: calc($glitch-duration / $glitch-frequency);
 
 @mixin rgb-shift($name) {
   @keyframes rgb-shift-#{$name} {
@@ -198,18 +217,16 @@ $glitch-interval: $glitch-duration / $glitch-frequency;
   animation: glitch-#{$name} $animation-duration linear infinite alternate both;
 }
 
-body {
-  margin: 0;
-}
-
 .glitch {
   background: #000 no-repeat center;
   background-image: url(../assets/img/FotoCv_SQUARE2.jpg) ;
   background-size: 0;
+  max-width: 100%;
   height: 100%;
   aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
+  
 
   &::before,
   &::after,

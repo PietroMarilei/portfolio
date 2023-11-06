@@ -18,60 +18,70 @@ export default {
     <div class="container">
 
         <div class="upperSection">
-                   <div class="downWrapper">
-                       <div class="line"></div>
-                       <div class="pageUp" @click="$emit('goCenterfromDown')">
-                           <div class="iconUp pulse">
-                               <div class="keyBodyUp">
-                                   <div class="arrowUp">
-                                       &#9650;
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="line"></div>
-                   </div>
-       <h3 class="mx-2 text-align-end">use &#9650; to Home</h3>
-               </div>
+            <div class="downWrapper">
+                <div class="line"></div>
+                <div class="pageUp" @click="$emit('goCenterfromDown')">
+                    <div class="iconUp pulse">
+                        <div class="keyBodyUp">
+                            <div class="arrowUp">
+                                &#9650;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <h3 class="mx-2 text-align-end">use &#9650; to Home</h3>
+        </div>
 
         <div class="ideCont">
-					<div class="topSec">
-	                <h6>&#x2632; My Projects</h6>
-	            </div>
-					<div class="middleSec">
-	                <div class="col-left">
-	                    <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
-											Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, nemo fugit, facilis veniam, animi rerum voluptatem repellat vero praesentium debitis ab fugiat ducimus perspiciatis fuga cumque rem harum ad incidunt.
-	                </div>
+            <div class="topSec">
+                <h6>&#x2632; My Projects</h6>
+            </div>
+            <div class="middleSec">
+                <div class="col-left">
+                    <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, nemo fugit, facilis veniam, animi rerum voluptatem repellat vero praesentium debitis ab fugiat ducimus perspiciatis fuga cumque rem harum ad incidunt.
+                </div>
 
-	                <div class="col-right">
-										
-	                    <div class="projetCard">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
-											</div>
+                <div class="col-right">
+
+                    <div class="projetCard">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
+                    </div>
+                    <div class="projetCard">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
+                        </div>
+                        <div class="projetCard">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
+                            </div>
 
 
-	                </div>
-	            </div>
-				</div>       
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/main.scss' as *;
+
 .projetCard {
-	
+    width: calc(100% / 3);
 }
+
 .ideCont {
     margin: 2rem;
     padding-top: 0;
     border: 2px solid #366686;
     border-radius: 5px;
+
     .topSec {
         width: 100%;
         text-align: start;
         margin: 0 auto;
         border-bottom: 2px solid #366686;
+
         h6 {
             width: 30%;
             padding: 2rem;
@@ -83,15 +93,20 @@ export default {
             border-right: 2px solid #366686;
         }
     }
+
     .col-right {
+        display: flex;
+        justify-content: space-between;
         height: 100%;
         width: 70%;
         padding: 2rem;
+
         p {
             text-align: justify;
         }
     }
 }
+
 .middleSec {
     display: flex;
 
@@ -106,6 +121,7 @@ export default {
         width: 300%;
     }
 }
+
 .container {
     width: 100%;
     height: 100%;
@@ -114,6 +130,7 @@ export default {
     justify-content: center;
     position: relative;
 }
+
 .downWrapper {
     display: flex;
     justify-content: space-between;
@@ -131,5 +148,4 @@ export default {
         text-transform: uppercase;
         font-weight: 400;
     }
-}
-</style>
+}</style>
