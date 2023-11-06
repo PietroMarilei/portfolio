@@ -6,6 +6,7 @@ import HomeComp from './HomeComp.vue';
 import BioComponent from './BioComponent.vue'
 import SkillsComponent from './SkillsComponent.vue';
 import ContactComponent from './ContactComponent.vue';
+import ProjectsComponent from './ProjectsComponent.vue';
 export default {
   components: {
     TestComp,
@@ -13,6 +14,7 @@ export default {
     BioComponent,
     SkillsComponent,
     ContactComponent,
+    ProjectsComponent,
   },
   data() {
     return {
@@ -141,10 +143,7 @@ export default {
         <div class="bottomContainer">
 
           <div class="card">
-            <p>carta sotto</p>
-            <TestComp />
-            
-            <button @click="goCenterfromDown()"> up</button>
+            <ProjectsComponent @goCenterfromDown="goCenterfromDown()" />
           </div>
 
         </div>

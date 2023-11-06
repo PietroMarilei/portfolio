@@ -42,6 +42,8 @@ export default {
                         Trained by a childhood filled with &#8883; Legos, I love finding practical solutions to bring things together &#8904;. <br>
                         The code ䷃ is for me the perfect 'dojo' to unleash my logic and imagination, always with an &#128065; eye for design.
                     </p>
+
+
                 </div>
             </div>
         </div>
@@ -115,20 +117,7 @@ export default {
     }
 }
 
-.middleSec {
-    display: flex;
 
-    .col-left {
-        width: 30%;
-        // height: calc((100vh * 0.7) - 4rem);
-        border-right: 2px solid #366686;
-        padding: 2rem;
-    }
-
-    img {
-        width: 300%;
-    }
-}
 
 .downWrapper {
     display: flex;
@@ -148,7 +137,7 @@ export default {
         font-weight: 400;
     }
 }
-// -img glitch 
+// 📸 #region img animation
 
 @function rand($min, $max) {
   @return random() * ($max - $min) + $min;
@@ -283,4 +272,5 @@ body {
     }
   }
 }
+// #endregion img 
 </style>
