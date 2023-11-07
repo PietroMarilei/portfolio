@@ -51,8 +51,9 @@ export default {
 
                     <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
                         {{ singleProject.test }}
+                        {{ singleProject.img }}
                       
-                        <img :src="singleProject.test" alt="a">
+                        <img :src="singleProject.img" alt="a">
                         {{ singleProject.description}}
 
                     </div>
