@@ -46,17 +46,15 @@ export default {
 
                 <div class="col-right">
 
-                    <div class="projetCard">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
+                    <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
+                      
+                        <img :src=" singleProject.img" alt="a">
+                        {{ singleProject.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia non, eos reprehenderit sit error voluptatem deserunt dolorem voluptatum nisi, optio, provident voluptates. Similique modi quis non. Aut, suscipit doloremque.
+
                     </div>
-                    <div class="projetCard">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
-                        </div>
-                        <div class="projetCard">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus obcaecati eos quis, quaerat a architecto cum molestiae ex deserunt harum aliquid dolor molestias porro. Commodi assumenda tempore alias debitis.
-                            </div>
+                    
 
-
+                    
                 </div>
             </div>
         </div>
@@ -66,13 +64,24 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/main.scss' as *;
 
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
 .projetCard {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
+    border: 1px solid red;
 }
 
 .ideCont {
+    height: 100%;
+    overflow-y: auto;
     margin: 2rem;
-    padding-top: 0;
+    margin-top: 6rem;
     border: 2px solid #366686;
     border-radius: 5px;
 
@@ -95,7 +104,9 @@ export default {
     }
 
     .col-right {
+        overflow-y: auto;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         height: 100%;
         width: 70%;
@@ -122,14 +133,6 @@ export default {
     }
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
 
 .downWrapper {
     display: flex;
