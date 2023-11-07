@@ -50,10 +50,11 @@ export default {
                 <div class="col-right">
 
                     <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
-                        {{ singleProject.test }}
                         {{ singleProject.img }}
+                        {{ singleProject.nomeImg }}
                       
                         <img :src="singleProject.img" alt="a">
+                        <!-- <img :src="'assets/img/projectsImg'+singleProject.nomeImg" alt="a"> -->
                         {{ singleProject.description}}
 
                     </div>
