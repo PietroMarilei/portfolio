@@ -54,22 +54,22 @@ export const store = reactive(
         projects: [
             {
                 name: "Be-Sport",
-                img: '01_besport.jpg',
+                img: '/projectsImg/01_besport.jpg',
                 description: 'A website dedicated to help you find the perfect personal trainer for you!'
             },
             {
                 name: "Netflix",
-                img: '03_netflix.jpg',
+                img: '/projectsImg/03_netflix.jpg',
                 description: 'Netflix and chill, but it\'s a replica'
             }, 
             {
                 name: "What's App",
-                img: '04_whatsapp.jpg',
+                img: '/projectsImg/04_whatsapp.jpg',
                 description: 'Try write a message, it will not left you on read &#10003; '
             },
             {
                 name: "NexGen",
-                img: '02_midterm.jpg',
+                img: '/projectsImg/02_midterm.jpg',
                 description: 'Need financial advisory? A web page can\'t help you'
             }
         ]

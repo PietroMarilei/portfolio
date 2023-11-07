@@ -40,7 +40,7 @@ export default {
             </div>
             <div class="middleSec">
                 <div class="col-left">
-                    <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
+                    <img src="/projectsImg/01_besport.jpg" alt="a">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, nemo fugit, facilis veniam, animi rerum voluptatem repellat vero praesentium debitis ab fugiat ducimus perspiciatis fuga cumque rem harum ad incidunt.
                 </div>
 
@@ -48,7 +48,7 @@ export default {
 
                     <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
                       
-                        <img v-bind:src="'/projectsImg/'+ singleProject.img" alt="a">
+                        <img :src="singleProject.img" alt="a">
                         {{ singleProject.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia non, eos reprehenderit sit error voluptatem deserunt dolorem voluptatum nisi, optio, provident voluptates. Similique modi quis non. Aut, suscipit doloremque.
 
                     </div>
