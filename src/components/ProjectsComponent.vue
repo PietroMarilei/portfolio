@@ -50,6 +50,11 @@ export default {
                             <p>
                                 &#10551; {{ singleProject.name }}
                             </p>
+                            <div>
+                                <span class="singleTech" v-for="singleTech in singleProject.languages">
+                                    <i :class="singleTech"></i>
+                                </span>
+                            </div>
                         </div>
 
                         <div class="cardBody">
@@ -58,18 +63,17 @@ export default {
                                 {{ singleProject.description }}
                             </p>
 
+                            <div class="functionality">
+                                ~ {{ singleProject.functionality }}
+                            </div>
+
                             <div class="btnLink"> 
                                 <a href="">
                                     View_Project
                                 </a>
                             </div>
                         </div>
-
-
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -169,23 +173,37 @@ export default {
     border: 2px solid #366686;
     border-radius: 5px;
     background-color: #0d1d2d7d;
+    transition: 0.5s;
    
     .cardHeader {
-        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
         border-bottom: 2px solid #366686;
-        padding-left: 1rem;
         text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 500 !important
+        font-size: 1rem;
+        font-weight: 500 !important;
+
+        .singleTech {
+            margin: 0 5px;
+            font-size: 1.3rem;
+        }
     }
 
     .cardBody {
         padding: 1rem;
         img {
-            border-radius: 10px;
+            border-radius: 7px;
         }
         p {
             margin: 2rem 0;
+        }
+        .functionality {
+            text-align: end;
+            font-size: 0.8rem;
+            font-style: italic;
+            margin: 1rem 0;
         }
         .btnLink{
             text-align: end;
@@ -204,17 +222,11 @@ export default {
         }
 
         a:hover {
-            // filter: invert(100%);
             background-color: #6689aa ;
             color:#08131d ;
             font-weight: 600;
         }
-        a:hover:before {
-            content: '⟓';
-        } 
-         a:hover:after {
-            content: '⟔';
-        } 
+    
     }
        
 }

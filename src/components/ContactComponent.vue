@@ -189,7 +189,6 @@ form {
 
 .ideCont {
     margin: 2rem;
-    // padding: 2rem;
     border: 2px solid #366686;
     border-radius: 5px;
     height: 70%;

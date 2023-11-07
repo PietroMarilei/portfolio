@@ -55,26 +55,65 @@ export const store = reactive(
             {
                 name: "Be-Sport",
                 img: 'projectsImg/01_besport.jpg',
-                nomeImg: '01_besport.jpg',
-                description: 'A website dedicated to help you find the perfect personal trainer for you!'
+                description: 'A website dedicated to help you find the perfect personal trainer for you!',
+                functionality: 'Use the search bar to find your trainer',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue:  'devicon-vuejs-plain',
+                    PHP:  'devicon-php-plain',
+                    MySQL: 'devicon-mysql-plain',
+                    Laravel:  'devicon-laravel-plain',
+                    Git: 'devicon-git-plain',
+                }
             },
             {
                 name: "Netflix",
                 img: 'projectsImg/03_netflix.jpg',
-                nomeImg: '01_besport.jpg',
-                description: 'Netflix and chill, but it\'s a replica'
+                description: 'Netflix and chill: here\'s a replica of the most known streaming platform made using TMDB API',
+                functionality: 'Try search by genre and title',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
             }, 
             {
-                name: "What's App",
+                name: "WhatsApp",
                 img: 'projectsImg/04_whatsapp.jpg',
-                nomeImg: '01_besport.jpg',
-                description: 'Try write a message, it will not left you on read &#10003; '
+                description: 'WhatsApp web application replica with dark mode and search',
+                functionality: 'Try write a message, it will not left you on read.',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
             },
             {
                 name: "NexGen",
                 img: 'projectsImg/02_midterm.jpg',
-                nomeImg: '01_besport.jpg',
-                description: 'Need financial advisory? A web page can\'t help you'
+                description: 'A mokeup for a financial start-up NexGen',
+                functionality: '',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
             }
         ]
     },
