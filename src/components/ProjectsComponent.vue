@@ -9,7 +9,10 @@ export default {
         }
     },
     methods: {
-
+          getImagePath: function (img) {
+            console.log(img);
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        },
     },
 }
 </script>
@@ -47,9 +50,10 @@ export default {
                 <div class="col-right">
 
                     <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
+                        {{ singleProject.test }}
                       
-                        <img :src="require(singleProject.img)" alt="a">
-                        {{ singleProject.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia non, eos reprehenderit sit error voluptatem deserunt dolorem voluptatum nisi, optio, provident voluptates. Similique modi quis non. Aut, suscipit doloremque.
+                        <img :src="singleProject.test" alt="a">
+                        {{ singleProject.description}}
 
                     </div>
                     

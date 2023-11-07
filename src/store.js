@@ -54,26 +54,28 @@ export const store = reactive(
         projects: [
             {
                 name: "Be-Sport",
-                img: '/projectsImg/01_besport.jpg',
+                img: 'projectsImg/01_besport.jpg',
+                test: '/projectsImg/01_besport.jpg',
                 description: 'A website dedicated to help you find the perfect personal trainer for you!'
             },
             {
                 name: "Netflix",
                 img: '/projectsImg/03_netflix.jpg',
+                test: '/projectsImg/01_besport.jpg',
                 description: 'Netflix and chill, but it\'s a replica'
             }, 
             {
                 name: "What's App",
                 img: '/projectsImg/04_whatsapp.jpg',
+                test: '/projectsImg/01_besport.jpg',
                 description: 'Try write a message, it will not left you on read &#10003; '
             },
             {
                 name: "NexGen",
                 img: '/projectsImg/02_midterm.jpg',
+                test: '/projectsImg/01_besport.jpg',
                 description: 'Need financial advisory? A web page can\'t help you'
             }
         ]
     },
 )
-
-//could use Pinia ora Vuex
