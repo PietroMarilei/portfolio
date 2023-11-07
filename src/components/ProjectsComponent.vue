@@ -48,7 +48,7 @@ export default {
 
                     <div class="projetCard" v-for="(singleProject,i) in this.store.projects" key="i">
                       
-                        <img :src="singleProject.img" alt="a">
+                        <img src="/projectsImg/01_besport.jpg" alt="a">
                         {{ singleProject.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia non, eos reprehenderit sit error voluptatem deserunt dolorem voluptatum nisi, optio, provident voluptates. Similique modi quis non. Aut, suscipit doloremque.
 
                     </div>
