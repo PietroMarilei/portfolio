@@ -68,7 +68,7 @@ export default {
                             </div>
 
                             <div class="btnLink"> 
-                                <a href="">
+                                <a target="_blank" :href="singleProject.link">
                                     View_Project
                                 </a>
                             </div>

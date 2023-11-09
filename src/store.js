@@ -52,29 +52,31 @@ export const store = reactive(
 
         ],
         projects: [
-            {
-                name: "Be-Sport",
-                img: 'projectsImg/01_besport.jpg',
-                description: 'A website dedicated to help you find the perfect personal trainer for you!',
-                functionality: 'Use the search bar to find your trainer',
-                languages: {
-                    HTML: 'devicon-html5-plain',
-                    CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
-                    Bootstrap: 'devicon-bootstrap-plain',
-                    Javascript: 'devicon-javascript-plain',
-                    Vue:  'devicon-vuejs-plain',
-                    PHP:  'devicon-php-plain',
-                    MySQL: 'devicon-mysql-plain',
-                    Laravel:  'devicon-laravel-plain',
-                    Git: 'devicon-git-plain',
-                }
-            },
+            // {
+            //     name: "Be-Sport",
+            //     img: 'projectsImg/besport.jpg',
+            //     description: 'A website dedicated to help you find the perfect personal trainer for you!',
+            //     functionality: 'Use the search bar to find your trainer',
+            //     link: 'https://pietromarilei.github.io/vite-boolflix/',
+            //     languages: {
+            //         HTML: 'devicon-html5-plain',
+            //         CSS: 'devicon-css3-plain',
+            //         Javascript: 'devicon-bootstrap-plain',
+            //         Bootstrap: 'devicon-bootstrap-plain',
+            //         Javascript: 'devicon-javascript-plain',
+            //         Vue:  'devicon-vuejs-plain',
+            //         PHP:  'devicon-php-plain',
+            //         MySQL: 'devicon-mysql-plain',
+            //         Laravel:  'devicon-laravel-plain',
+            //         Git: 'devicon-git-plain',
+            //     }
+            // },
             {
                 name: "Netflix",
-                img: 'projectsImg/03_netflix.jpg',
+                img: 'projectsImg/netflix.jpg',
                 description: 'Netflix and chill: here\'s a replica of the most known streaming platform made using TMDB API',
                 functionality: 'Try search by genre and title',
+                link: 'https://pietromarilei.github.io/vite-boolflix/',
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
@@ -87,9 +89,10 @@ export const store = reactive(
             }, 
             {
                 name: "WhatsApp",
-                img: 'projectsImg/04_whatsapp.jpg',
+                img: 'projectsImg/whatsapp.jpg',
                 description: 'WhatsApp web application replica with dark mode and search',
-                functionality: 'Try write a message, it will not left you on read.',
+                functionality: 'Try write a message, it will not left you on read. Or try dark mode',
+                link: 'https://pietromarilei.github.io/vue-boolzapp/#',
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
@@ -102,9 +105,74 @@ export const store = reactive(
             },
             {
                 name: "NexGen",
-                img: 'projectsImg/02_midterm.jpg',
+                img: 'projectsImg/midterm.jpg',
                 description: 'A mokeup for a financial start-up NexGen',
                 functionality: '',
+                link: 'https://pietromarilei.github.io/proj-html-vuejs/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
+            },
+            {
+                name: "Comics",
+                img: 'projectsImg/comics.jpg',
+                description: 'A Comics world, in single web page',
+                functionality: '',
+                link: 'https://pietromarilei.github.io/vite-comics/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                } 
+            },
+            {
+                name: "Zalando",
+                img: 'projectsImg/zalando.jpg',
+                description: 'A simple way to buy your clothes',
+                functionality: '',
+                link: 'https://pietromarilei.github.io/html-css-boolando/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
+            },
+            {
+                name: "Dropbox",
+                img: 'projectsImg/dropbox.jpg',
+                description: 'A css pratice to replicate the place where you forgot you have 2010 photos',
+                functionality: '',
+                link: 'https://pietromarilei.github.io/html-css-boolando/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    Git: 'devicon-git-plain',
+                }
+            },
+            {
+                name: "Discord",
+                img: 'projectsImg/discord.jpg',
+                description: 'The discord web page',
+                functionality: '',
+                link: 'https://pietromarilei.github.io/html-css-boolando/',
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
