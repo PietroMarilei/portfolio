@@ -91,13 +91,13 @@ export default {
         </div>
         <!-- resume here -->
         <div class="innerContainer" :class="this.selectedTab == 3 ? '' : 'd-none'">
-                <p>
-                    Download my resume here ->
-                </p>
-                <a href="../assets/Pietro Marilei - Web Developer 3.pdf" class="d-flex">
-                    <i class="fa-solid fa-file"></i> <span>My resume</span>
-                </a>
-            </div>
+            <p>
+                Download my resume here ->
+            </p>
+            <a href="../assets/Pietro Marilei - Web Developer 3.pdf" class="d-flex">
+                <i class="fa-solid fa-file"></i> <span>My resume</span>
+            </a>
+        </div>
     </div>
     <div class="pageRight" @click="$emit('goCenterfromLeft')">
         <div class="iconRight pulse">
@@ -111,23 +111,23 @@ export default {
         </div>
         <div class="verticalLine"></div>
     </div>
-
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables.scss" as *;
+
 .innerContainer {
     height: 93%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    a { 
+    a {
 
         text-decoration: none;
         font-weight: 500;
         cursor: pointer;
-        color : $third-color;
+        color: $third-color;
 
         i {
             margin: 0 1rem;
@@ -220,10 +220,36 @@ form {
 
 
 @media only screen and (max-width: 425px) {
- ul {
-    flex-wrap: wrap;
-    justify-content: center;
- }
+    .ideCont {
+        margin: 10px;
+    }
 
-}
-</style>
+    .topSec {
+        h6 {
+            font-size: 0.8rem;
+            border: none;
+            padding: 0.5rem;
+        }
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    label {
+        font-size: 0.6rem !important;
+    }
+
+    input,
+    textarea {
+        font-size: 0.6rem !important;
+    }
+
+    .innerContainer {
+        flex-wrap: wrap;
+        height: 20%;
+        padding-top: 1rem;
+    }
+
+}</style>

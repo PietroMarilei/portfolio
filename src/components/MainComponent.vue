@@ -209,4 +209,9 @@ p {
   padding: 1rem;
 
 }
+@media only screen and (max-width: 425px) {
+.card{
+  padding: 0;
+}
+}
 </style>

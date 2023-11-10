@@ -56,7 +56,7 @@ export default {
                                 <i :class="singleSkill.icon"></i>&nbsp
                                 <!-- ₪ &nbsp -->
                             </div>
-                            <div>{{ singleSkill.name }}</div>
+                            <p>{{ singleSkill.name }}</p>
                         </li>
                     </ul>
                 </div>
@@ -208,10 +208,24 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // height: 70%;
+    height: 70vh;
 }
 
 @media only screen and (max-width: 425px) {
+
+    .skillsContainer {
+        height: 90vh;
+    }
+    .ideCont {
+        margin: 10px;
+    }
+    .topSec {
+        text-align: center;
+        h6 {
+            width: 100%;
+            border-right: none;
+        }
+    }
     .fakeFunc {
         p {
             margin-left: 0rem !important;

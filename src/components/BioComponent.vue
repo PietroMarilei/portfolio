@@ -289,4 +289,42 @@ $glitch-interval: calc($glitch-duration / $glitch-frequency);
   }
 }
 
-// #endregion img </style>
+// #endregion img 
+
+@media only screen and (max-width: 425px) {
+
+  h3 {
+    opacity: 0;
+  }
+
+  .ideCont {
+    margin: 10px;
+
+    .topSec {
+      h6 {
+        width: 100%;
+        text-align: center;
+        border: none;
+      }
+    }
+
+    .col-left,
+    .col-right {
+      padding: 10px;
+    }
+
+    .col-left {
+      position: relative;
+
+      .imgWrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 3px;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+}</style>
