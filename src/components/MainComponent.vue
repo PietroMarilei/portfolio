@@ -1,5 +1,4 @@
 <script>
-import TestComp from './TestComp.vue';
 import { store } from '../store';
 import { vShow } from 'vue';
 import HomeComp from './HomeComp.vue';
@@ -9,7 +8,6 @@ import ContactComponent from './ContactComponent.vue';
 import ProjectsComponent from './ProjectsComponent.vue';
 export default {
   components: {
-    TestComp,
     HomeComp,
     BioComponent,
     SkillsComponent,
