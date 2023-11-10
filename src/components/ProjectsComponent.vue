@@ -63,7 +63,7 @@ export default {
                                 {{ singleProject.description }}
                             </p>
 
-                            <div class="functionality">
+                            <div v-if="singleProject.functionality != ''" class="functionality">
                                 ~ {{ singleProject.functionality }}
                             </div>
 
@@ -109,10 +109,7 @@ export default {
 
         h6 {
 
-            padding: 2rem;
-            padding-top: 0.5rem;
-            padding-left: 1rem;
-            padding-bottom: 0.5rem;
+            padding: 0.5rem;
             font-weight: 500;
             font-size: 1rem;
             text-align: center;
@@ -233,4 +230,20 @@ export default {
  .projectCard:hover {
         background-color: #122c4665;
     }
+
+    @media only screen and (max-width: 425px) {
+        h3 {
+            display: none;
+        }
+   .col-right {
+    padding: 10px !important;
+    width: 100% !important;
+   }
+   .projectCard {
+    i {
+        display:none ;
+    }
+    
+   }
+}
 </style>
