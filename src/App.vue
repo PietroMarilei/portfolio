@@ -1,23 +1,30 @@
 <script >
 import { store } from './store';
-import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import LoaderComponent from './components/LoaderComponent.vue';
 
 
 export default {
   components: {
-    HeaderComponent,
+   
     MainComponent,
     FooterComponent,
+    LoaderComponent,
   },
   data(){
     return {
       store,
+      isload: false,
     }
   }, 
   methods: {
 
+  },
+  created() {
+    setTimeout(() => {
+      this.isload = true
+    }, 1010);             
   },
   mounted() {
     // window.addEventListener('keyup', function (event) {
@@ -28,12 +35,15 @@ export default {
 </script>
 
 <template>
+  <div class="noiseBg"></div>
+  <Transition>
+  <LoaderComponent key="1" v-if="isload == false"/>
+  <div v-else key="2">
+    <MainComponent/>
+  </div>
 
-  <!-- <HeaderComponent/> -->
-<div class="noiseBg"></div>
-<MainComponent/>
+  </Transition>
 
-  <!-- <FooterComponent/> -->
 
 </template>
 
@@ -47,8 +57,10 @@ export default {
     background-color: #010c16;
     color: rgb(255, 255, 255);
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
+
+
 
 .noiseBg {
   position: fixed;
@@ -78,5 +90,14 @@ export default {
     90% { transform: translate(10%,5%) }
     100% { transform: translate(5%,0) }
 }
-  
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.8s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+} 
 </style>

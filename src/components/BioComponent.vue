@@ -21,14 +21,14 @@ export default {
 
     <div class="ideCont">
       <div class="topSec">
-        <h6>&#x2632; About Me</h6>
+        <h6>☰ About Me</h6>
       </div>
 
       <div class="middleSec">
         <div class="col-left">
           <!-- <img src="../assets/img/FotoCv_SQUARE2.jpg" alt="a"> -->
           <div class="imgWrapper">
-            <div class="glitch" style="">
+            <div class="glitch" >
               <div class="channel r"></div>
               <div class="channel g"></div>
               <div class="channel b"></div>
@@ -41,7 +41,7 @@ export default {
 
         <div class="col-right">
           <p>
-            Trained by a childhood filled with &#8883; Legos, I love finding practical solutions to bring things together &#8904;. <br>
+            Trained by a childhood with a lot of &#8883; Legos, I love finding practical solutions to bring things together &#8904;. <br>
             The code ䷃ is for me the perfect 'dojo' to unleash my logic and imagination, always with an &#128065; eye for design.
           </p>
 

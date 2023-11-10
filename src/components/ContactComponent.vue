@@ -30,7 +30,7 @@ export default {
         <div class="topSec">
             <ul class="d-flex">
                 <li @click="this.selectedTab = 0" :class="this.selectedTab != 0 ? 'greyed' : ''">
-                    <h6>⋗ Contact me here &#9660;</h6>
+                    <h6>☲  Contact me here &#9660;</h6>
                 </li>
                 <li @click="this.selectedTab = 1" :class="this.selectedTab != 1 ? 'greyed' : ''">
                     <h6> ⇒ my Git-Hub &#9660;</h6>
@@ -145,6 +145,7 @@ export default {
 form {
     label {
         font-size: 0.8rem;
+        padding: 0.2rem 0;
     }
 
     input {

@@ -41,7 +41,7 @@ export default {
 
         <div class="ideCont">
             <div class="topSec">
-                <h6>&#x2632; My Skills</h6>
+                <h6>☵ My Skills</h6>
             </div>
 
             <div class="middleSec">
@@ -125,7 +125,7 @@ export default {
 
     .col-left {
         width: 30%;
-        // height: calc((100vh * 0.7) - 4rem);
+        height: calc((100vh * 0.7) - 4rem);
         // height: 100%;
         border-right: 2px solid #366686;
         padding: 2rem;
@@ -137,7 +137,6 @@ export default {
 
             li {
                 margin-bottom: 0.3rem;
-                flex-wrap: wrap;
             }
         }
     }
@@ -216,20 +215,49 @@ export default {
     .skillsContainer {
         height: 90vh;
     }
+
     .ideCont {
         margin: 10px;
     }
+
+    .col-left {
+        height: 80vh !important;
+        padding: 10px !important;
+        width: 35% !important;
+
+        li:nth-child(4) {
+            p {
+                display: none;
+            }
+        }
+        
+        li:nth-child(4):after {
+            font-size: 0.8rem;
+            content: "Js";
+        }
+    }
+
+    .col-right {
+        padding: 15px !important;
+        width: 65% !important;
+
+        .langIcon {
+            font-size: 2rem !important;
+        }
+    }
+
     .topSec {
         text-align: center;
+
         h6 {
             width: 100%;
             border-right: none;
         }
     }
+
     .fakeFunc {
         p {
             margin-left: 0rem !important;
         }
     }
-}
-</style>
+}</style>

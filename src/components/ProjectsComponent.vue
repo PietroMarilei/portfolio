@@ -39,7 +39,7 @@ export default {
 
         <div class="ideCont">
             <div class="topSec">
-                <h6>&#x2632; My Projects</h6>
+                <h6>☷ My Projects</h6>
             </div>
             <div class="middleSec">
 

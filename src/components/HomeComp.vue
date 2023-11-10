@@ -56,15 +56,17 @@ export default {
                 </div>
             </div>
             <div class="row">
+                
                 <h1> Pietro Marilei
                 </h1>
+                <h4 class="fade-in">~ Web Dev ~</h4>
             </div>
             <div class="pageRight" @click="$emit('goRight')">
                 <div class="iconRight pulse">
                     <div class="keyBodyRight">
                         <div class="arrowRight">
                             &#9654;
-                            <!-- <i class="fa-solid fa-chevron-right fa-beat-fade"></i> -->
+
                         </div>
                     </div>
 
@@ -81,12 +83,11 @@ export default {
             </div>
 
             <div class="pageDown" @click="$emit('goDown')">
-                <!-- <p>Testo Sopra</p> -->
                 <div class="iconDown pulse">
                     <div class="keyBodyDown">
                         <div class="arrowDown">
                             &#9660;
-                            <!-- <i class="fa-solid fa-chevron-down fa-fade"></i> -->
+
                         </div>
                     </div>
                 </div>
@@ -102,6 +103,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+    
     flex-shrink: 0;
     border: 2px solid #366686;
     border-radius: 5px;
@@ -119,6 +121,14 @@ export default {
 
 h1 {
     text-align: center;
+}
+h4 {
+    font-size:1.2rem;
+    padding-top: 0.5rem;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+
 }
 
 h3 {
@@ -139,4 +149,6 @@ h3 {
     display: none;
 }
 }
+
+
 </style>
