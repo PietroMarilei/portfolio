@@ -219,5 +219,11 @@ form {
 }
 
 
+@media only screen and (max-width: 425px) {
+ ul {
+    flex-wrap: wrap;
+    justify-content: center;
+ }
 
+}
 </style>

@@ -14,12 +14,12 @@ export default {
         showOnclick(i) {
             this.isActive = i;
         },
-      
+
     },
     mounted() {
 
     },
-    
+
 }
 </script>
 
@@ -47,7 +47,8 @@ export default {
             <div class="middleSec">
                 <div class="col-left">
                     <ul>
-                        <li v-for="(singleSkill, i) in this.store.skills" :key="i" class="d-flex align-items-center" @click="showOnclick(i); startTypewriter(singleSkill.description)">
+                        <li v-for="(singleSkill, i) in this.store.skills" :key="i" class="d-flex align-items-center " @click="showOnclick(i); startTypewriter(singleSkill.description)">
+
                             <div v-if="isActive == i" class="">
                                 &#8594; &nbsp;
                             </div>
@@ -55,7 +56,7 @@ export default {
                                 <i :class="singleSkill.icon"></i>&nbsp
                                 <!-- ₪ &nbsp -->
                             </div>
-                            {{ singleSkill.name }}
+                            <div>{{ singleSkill.name }}</div>
                         </li>
                     </ul>
                 </div>
@@ -65,7 +66,7 @@ export default {
                         <div class="fakeFunc">
                             <span>function</span> <span>I_Can(<span>{{ singleSkill.name }}</span>)</span> <span>{</span>
 
-                            <p class="typing-demo">{{ singleSkill.description }}</p> <span>}</span>
+                            <p>{{ singleSkill.description }}</p> <span>}</span>
                         </div>
 
                         <div class="langIcon">
@@ -133,8 +134,10 @@ export default {
         ul {
             cursor: pointer;
             font-weight: 300;
+
             li {
                 margin-bottom: 0.3rem;
+                flex-wrap: wrap;
             }
         }
     }
@@ -197,7 +200,7 @@ export default {
     }
 }
 
-.active {  
+.active {
     opacity: 100%;
 }
 
@@ -208,5 +211,11 @@ export default {
     // height: 70%;
 }
 
-
+@media only screen and (max-width: 425px) {
+    .fakeFunc {
+        p {
+            margin-left: 0rem !important;
+        }
+    }
+}
 </style>

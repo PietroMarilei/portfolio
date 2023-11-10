@@ -133,5 +133,10 @@ h3 {
     align-items: center;
 }
 
+@media only screen and (max-width: 425px) {
 
+h3 {
+    display: none;
+}
+}
 </style>
