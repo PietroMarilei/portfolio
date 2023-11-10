@@ -80,7 +80,6 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
                     Javascript: 'devicon-javascript-plain',
                     Vue: 'devicon-vuejs-plain',
@@ -96,7 +95,6 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
                     Javascript: 'devicon-javascript-plain',
                     Vue: 'devicon-vuejs-plain',
@@ -112,7 +110,6 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
                     Javascript: 'devicon-javascript-plain',
                     Vue: 'devicon-vuejs-plain',
@@ -144,10 +141,7 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
-                    Bootstrap: 'devicon-bootstrap-plain',
                     Javascript: 'devicon-javascript-plain',
-                    Vue: 'devicon-vuejs-plain',
                     Git: 'devicon-git-plain',
                 }
             },
@@ -160,10 +154,8 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
                     Javascript: 'devicon-javascript-plain',
-                    Vue: 'devicon-vuejs-plain',
                     Git: 'devicon-git-plain',
                 }
             },
@@ -176,10 +168,7 @@ export const store = reactive(
                 languages: {
                     HTML: 'devicon-html5-plain',
                     CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
-                    Javascript: 'devicon-javascript-plain',
-                    Vue: 'devicon-vuejs-plain',
                     Git: 'devicon-git-plain',
                 }
             }

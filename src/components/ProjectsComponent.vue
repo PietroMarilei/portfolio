@@ -51,7 +51,7 @@ export default {
                                 &#10551; {{ singleProject.name }}
                             </p>
                             <div>
-                                <span class="singleTech" v-for="singleTech in singleProject.languages">
+                                <span class="singleTech" v-for="(singleTech, j) in singleProject.languages" key="j">
                                     <i :class="singleTech"></i>
                                 </span>
                             </div>
