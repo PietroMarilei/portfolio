@@ -85,7 +85,7 @@ export default {
             <p>
                 Check my Linkedin here ->
             </p>
-            <a href="www.linkedin.com/in/pietromarilei" class="d-flex" target="_blank">
+            <a href="https://www.linkedin.com/in/pietromarilei/" class="d-flex" target="_blank">
                 <i class="fa-brands fa-linkedin"></i> <span>linkedin/pietromarilei</span>
             </a>
         </div>
@@ -94,7 +94,7 @@ export default {
             <p>
                 Download my resume here ->
             </p>
-            <a href="../assets/Pietro Marilei - Web Developer 3.pdf" class="d-flex">
+            <a href="/portfolio/PietroMarilei-WebDeveloper.pdf" target="_blank" class="d-flex">
                 <i class="fa-solid fa-file"></i> <span>My resume</span>
             </a>
         </div>
