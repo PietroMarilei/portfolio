@@ -144,7 +144,7 @@ export default {
 .lowerSection {
   position: absolute;
   width: 100%;
-  bottom: -2rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 
