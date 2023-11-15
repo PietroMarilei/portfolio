@@ -52,25 +52,7 @@ export const store = reactive(
 
         ],
         projects: [
-            // {
-            //     name: "Be-Sport",
-            //     img: 'projectsImg/besport.jpg',
-            //     description: 'A website dedicated to help you find the perfect personal trainer for you!',
-            //     functionality: 'Use the search bar to find your trainer',
-            //     link: 'https://pietromarilei.github.io/vite-boolflix/',
-            //     languages: {
-            //         HTML: 'devicon-html5-plain',
-            //         CSS: 'devicon-css3-plain',
-            //         Javascript: 'devicon-bootstrap-plain',
-            //         Bootstrap: 'devicon-bootstrap-plain',
-            //         Javascript: 'devicon-javascript-plain',
-            //         Vue:  'devicon-vuejs-plain',
-            //         PHP:  'devicon-php-plain',
-            //         MySQL: 'devicon-mysql-plain',
-            //         Laravel:  'devicon-laravel-plain',
-            //         Git: 'devicon-git-plain',
-            //     }
-            // },
+            
             {
                 name: "Netflix",
                 img: 'projectsImg/netflix.jpg',
@@ -90,7 +72,7 @@ export const store = reactive(
                 name: "WhatsApp",
                 img: 'projectsImg/whatsapp.jpg',
                 description: 'WhatsApp web application replica with dark mode and search',
-                functionality: 'Try write a message, it will not left you on read. Or try dark mode',
+                functionality: 'Try dark mode or try write a message, it will not left you on read.',
                 link: 'https://pietromarilei.github.io/vue-boolzapp/#',
                 languages: {
                     HTML: 'devicon-html5-plain',
@@ -119,7 +101,7 @@ export const store = reactive(
             {
                 name: "Comics",
                 img: 'projectsImg/comics.jpg',
-                description: 'A Comics world, in single web page',
+                description: 'A Comics world, in single web page replica',
                 functionality: '',
                 link: 'https://pietromarilei.github.io/vite-comics/',
                 languages: {
@@ -135,7 +117,7 @@ export const store = reactive(
             {
                 name: "Zalando",
                 img: 'projectsImg/zalando.jpg',
-                description: 'A simple way to buy your clothes',
+                description: 'Want to buy a new cozy sweater?',
                 functionality: '',
                 link: 'https://pietromarilei.github.io/html-css-boolando/',
                 languages: {
@@ -162,7 +144,7 @@ export const store = reactive(
             {
                 name: "Discord",
                 img: 'projectsImg/discord.jpg',
-                description: 'The discord web page',
+                description: 'The discord web page replica in Html and Css',
                 functionality: '',
                 link: 'https://pietromarilei.github.io/html-css-boolando/',
                 languages: {
@@ -171,7 +153,26 @@ export const store = reactive(
                     Bootstrap: 'devicon-bootstrap-plain',
                     Git: 'devicon-git-plain',
                 }
-            }
+            },
+            {
+                name: "Be-Sport",
+                img: 'projectsImg/besport.jpg',
+                description: 'A website dedicated to help you find the perfect personal trainer for you!',
+                functionality: 'Use the search bar to find your trainer',
+                link: 'https://michela30.github.io/be-sport-frontoffice/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    PHP: 'devicon-php-plain',
+                    MySQL: 'devicon-mysql-plain',
+                    Laravel: 'devicon-laravel-plain',
+                    Git: 'devicon-git-plain',
+                }
+            },
         ]
     },
 )
