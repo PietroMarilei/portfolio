@@ -94,7 +94,7 @@ export default {
             <p>
                 Download my resume here ->
             </p>
-            <a href="/portfolio/PietroMarilei-WebDeveloper.pdf" target="_blank" class="d-flex">
+            <a href="./PietroMarilei-WebDeveloper.pdf" target="_blank" class="d-flex">
                 <i class="fa-solid fa-file"></i> <span>My resume</span>
             </a>
         </div>
