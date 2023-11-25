@@ -197,7 +197,7 @@ p {
 }
 
 .card {
-  height: 100dvh;
+  height: 100svh;
   width: 100vw;
   flex-shrink: 0;
   display: flex;

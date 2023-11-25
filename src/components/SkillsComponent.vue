@@ -207,13 +207,13 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70dvh;
+    height: 70svh;
 }
 
 @media only screen and (max-width: 425px) {
 
     .skillsContainer {
-        height: 90dvh;
+        height: 90svh;
     }
 
     .ideCont {
