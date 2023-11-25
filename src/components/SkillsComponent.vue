@@ -225,6 +225,17 @@ export default {
         padding: 10px !important;
         width: 35% !important;
 
+        li:nth-child(3) {
+            p {
+                display: none;
+            }
+        }
+        
+        li:nth-child(3):after {
+            font-size: 0.8rem;
+            content: "Bs";
+        }
+
         li:nth-child(4) {
             p {
                 display: none;
@@ -258,6 +269,7 @@ export default {
     .fakeFunc {
         p {
             margin-left: 0rem !important;
+            font-size: 0.7rem;
         }
     }
 }</style>
