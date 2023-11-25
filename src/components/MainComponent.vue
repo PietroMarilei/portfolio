@@ -162,13 +162,13 @@ p {
 }
 
 .mainWrapper {
-  height: 100dvh;
+  height: 100svh;
   width: 100vw;
   overflow: hidden;
 }
 
 .mainContainer {
-  transform: translate(-100vw, -100vh);
+  transform: translate(-100vw, -100svh);
   transition: all 1s linear;
 
 }
