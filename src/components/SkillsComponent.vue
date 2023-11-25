@@ -125,7 +125,7 @@ export default {
 
     .col-left {
         width: 30%;
-        height: calc((100vh * 0.7) - 4rem);
+        height: calc((100dvh * 0.7) - 4rem);
         // height: 100%;
         border-right: 2px solid #366686;
         padding: 2rem;
@@ -207,13 +207,13 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: 70dvh;
 }
 
 @media only screen and (max-width: 425px) {
 
     .skillsContainer {
-        height: 90vh;
+        height: 90dvh;
     }
 
     .ideCont {

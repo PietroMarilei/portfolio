@@ -6,7 +6,7 @@
 
 @keyframes goUp {
   100% {
-    translate: 0 100vh;
+    translate: 0 100dvh;
   }
 };
 .goDown {
@@ -15,7 +15,7 @@
 
 @keyframes goDown {
   100% {
-    translate: 0 -100vh;
+    translate: 0 -100dvh;
   }
 };
 
@@ -74,7 +74,7 @@
 
 @keyframes goCenterfromUp {
   0% {
-    translate: 0 100vh;
+    translate: 0 100dvh;
   }
 
   100% {
@@ -87,7 +87,7 @@
 
 @keyframes goCenterfromDown {
   0% {
-    translate: 0 -100vh;
+    translate: 0 -100dvh;
   }
 
   100% {
