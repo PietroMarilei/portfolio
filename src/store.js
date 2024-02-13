@@ -23,11 +23,21 @@ export const store = reactive(
                 description: 'JavaScript is a versatile scripting language primarily used for client-side web development. It enables dynamic content, interactivity, and manipulation of the Document Object Model (DOM). JavaScript is a key component in creating modern, interactive web applications, often used in conjunction with HTML and CSS to deliver a seamless user experience.',
                 icon:  "devicon-javascript-plain" ,
             },
+            {
+                name: 'Typescript',
+                description: 'TypeScript is an advanced superset of JavaScript, adding static typing to the language. It enhances code maintainability and scalability by allowing developers to define variable types, catching errors early in development. TypeScript compiles down to JavaScript, making it compatible with existing JavaScript codebases while providing additional features like interfaces, classes, and modules, fostering robust and efficient software development.',
+                icon: "devicon-typescript-plain",
+            },
 
             {
                 name: 'Vue.js',
                 description: 'Vue.js is a progressive JavaScript framework for building user interfaces. It focuses on the view layer of web applications, providing a flexible and efficient way to create interactive components. Vue.js is known for its simplicity and ease of integration, making it an excellent choice for both small projects and large-scale applications.',
                 icon: 'devicon-vuejs-plain',
+            },
+            {
+                name: 'React',
+                description: 'React is a powerful JavaScript library for building user interfaces, particularly for single-page applications. Developed by Facebook, React enables developers to create reusable UI components that efficiently update and render based on data changes. It employs a virtual DOM to optimize performance by minimizing actual DOM manipulations. React\'s declarative syntax and component- based architecture simplify the development process, allowing developers to efficiently build interactive and responsive web applications with ease.',
+                icon: 'devicon-react-plain',
             },
             {
                 name: 'PHP',
@@ -43,6 +53,11 @@ export const store = reactive(
                 name: 'Laravel',
                 description: 'Laravel is a PHP web application framework known for its elegant syntax and developer-friendly features. It follows the model-view-controller (MVC) pattern, streamlining the development process and promoting code organization. Laravel includes built-in tools for tasks such as routing, authentication, and database management, making it a powerful choice for building modern web applications.',
                 icon: 'devicon-laravel-plain',
+            },
+            {
+                name: 'Express.Js',
+                description: 'Express is a flexible and minimalist web application framework for Node.js. It simplifies the process of building web applications and APIs by providing a robust set of features for handling HTTP requests, routing, middleware integration, and templating. With its lightweight and unopinionated design, Express allows developers to create scalable and modular web applications quickly and efficiently, making it a popular choice for building modern web servers and APIs in Node.js environments.',
+                icon: 'devicon-express-plain',  
             },
             {
                 name: 'Git',
