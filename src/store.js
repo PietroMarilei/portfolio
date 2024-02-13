@@ -63,7 +63,6 @@ export const store = reactive(
                     CSS: 'devicon-css3-plain',
                     Javascript: 'devicon-bootstrap-plain',
                     Bootstrap: 'devicon-bootstrap-plain',
-                    Javascript: 'devicon-javascript-plain',
                     Vue: 'devicon-vuejs-plain',
                     PHP: 'devicon-php-plain',
                     MySQL: 'devicon-mysql-plain',
@@ -71,6 +70,21 @@ export const store = reactive(
                     Git: 'devicon-git-plain',
                 }
             },
+            {
+                name: "Weather React",
+                img: 'projectsImg/weather.png',
+                description: 'React app based on weather API',
+                functionality: 'Type your location!',
+                link: 'https://pietromarilei.github.io/Weather-React-dp/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    React: 'devicon-react-plain',
+                    Git: 'devicon-git-plain',
+                }
+            }
             
             {
                 name: "Netflix",
