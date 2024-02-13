@@ -84,7 +84,7 @@ export const store = reactive(
                     React: 'devicon-react-plain',
                     Git: 'devicon-git-plain',
                 }
-            }
+            },
             
             {
                 name: "Netflix",
