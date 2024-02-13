@@ -52,6 +52,25 @@ export const store = reactive(
 
         ],
         projects: [
+            {
+                name: "Be-Sport",
+                img: 'projectsImg/besport.jpg',
+                description: 'A website dedicated to help you find the perfect personal trainer for you!',
+                functionality: 'Use the search bar to find your trainer',
+                link: 'https://michela30.github.io/be-sport-frontoffice/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Javascript: 'devicon-javascript-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    PHP: 'devicon-php-plain',
+                    MySQL: 'devicon-mysql-plain',
+                    Laravel: 'devicon-laravel-plain',
+                    Git: 'devicon-git-plain',
+                }
+            },
             
             {
                 name: "Netflix",
@@ -154,25 +173,7 @@ export const store = reactive(
                     Git: 'devicon-git-plain',
                 }
             },
-            {
-                name: "Be-Sport",
-                img: 'projectsImg/besport.jpg',
-                description: 'A website dedicated to help you find the perfect personal trainer for you!',
-                functionality: 'Use the search bar to find your trainer',
-                link: 'https://michela30.github.io/be-sport-frontoffice/',
-                languages: {
-                    HTML: 'devicon-html5-plain',
-                    CSS: 'devicon-css3-plain',
-                    Javascript: 'devicon-bootstrap-plain',
-                    Bootstrap: 'devicon-bootstrap-plain',
-                    Javascript: 'devicon-javascript-plain',
-                    Vue: 'devicon-vuejs-plain',
-                    PHP: 'devicon-php-plain',
-                    MySQL: 'devicon-mysql-plain',
-                    Laravel: 'devicon-laravel-plain',
-                    Git: 'devicon-git-plain',
-                }
-            },
+            
         ]
     },
 )
