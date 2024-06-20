@@ -21,7 +21,7 @@ export const store = reactive(
             {
                 name: 'Javascript',
                 description: 'JavaScript is a versatile scripting language primarily used for client-side web development. It enables dynamic content, interactivity, and manipulation of the Document Object Model (DOM). JavaScript is a key component in creating modern, interactive web applications, often used in conjunction with HTML and CSS to deliver a seamless user experience.',
-                icon:  "devicon-javascript-plain" ,
+                icon: "devicon-javascript-plain",
             },
             {
                 name: 'Typescript',
@@ -57,7 +57,7 @@ export const store = reactive(
             {
                 name: 'Express.Js',
                 description: 'Express is a flexible and minimalist web application framework for Node.js. It simplifies the process of building web applications and APIs by providing a robust set of features for handling HTTP requests, routing, middleware integration, and templating. With its lightweight and unopinionated design, Express allows developers to create scalable and modular web applications quickly and efficiently, making it a popular choice for building modern web servers and APIs in Node.js environments.',
-                icon: 'devicon-express-plain',  
+                icon: 'devicon-express-plain',
             },
             {
                 name: 'Git',
@@ -86,6 +86,24 @@ export const store = reactive(
                 }
             },
             {
+                name: "CSV Analyzer",
+                img: 'projectsImg/csv_analyzer.png',
+                description: 'A php csv analyzer to detect epidemics by area and date',
+                functionality: 'Try to filer the data from the csv and analyze it',
+                link: 'https://pietromarilei.github.io/realMapsDeploy/index.html',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Javascript: 'devicon-bootstrap-plain',
+                    Bootstrap: 'devicon-bootstrap-plain',
+                    Vue: 'devicon-vuejs-plain',
+                    PHP: 'devicon-php-plain',
+                    MySQL: 'devicon-mysql-plain',
+
+                    Git: 'devicon-git-plain',
+                }
+            },
+            {
                 name: "Weather React",
                 img: 'projectsImg/weather.png',
                 description: 'React app based on weather API',
@@ -100,7 +118,7 @@ export const store = reactive(
                     Git: 'devicon-git-plain',
                 }
             },
-            
+
             {
                 name: "Netflix",
                 img: 'projectsImg/netflix.jpg',
@@ -115,7 +133,7 @@ export const store = reactive(
                     Vue: 'devicon-vuejs-plain',
                     Git: 'devicon-git-plain',
                 }
-            }, 
+            },
             {
                 name: "WhatsApp",
                 img: 'projectsImg/whatsapp.jpg',
@@ -160,7 +178,7 @@ export const store = reactive(
                     Javascript: 'devicon-javascript-plain',
                     Vue: 'devicon-vuejs-plain',
                     Git: 'devicon-git-plain',
-                } 
+                }
             },
             {
                 name: "Zalando",
@@ -202,7 +220,7 @@ export const store = reactive(
                     Git: 'devicon-git-plain',
                 }
             },
-            
+
         ]
     },
 )
