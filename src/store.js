@@ -35,10 +35,11 @@ export const store = reactive(
                 icon: 'devicon-vuejs-plain',
             },
             {
-                name: 'React',
-                description: 'React is a powerful JavaScript library for building user interfaces, particularly for single-page applications. Developed by Facebook, React enables developers to create reusable UI components that efficiently update and render based on data changes. It employs a virtual DOM to optimize performance by minimizing actual DOM manipulations. React\'s declarative syntax and component- based architecture simplify the development process, allowing developers to efficiently build interactive and responsive web applications with ease.',
-                icon: 'devicon-react-plain',
+                name: 'Wordpress',
+                description: 'WordPress is a popular open-source content management system (CMS) used for creating and managing websites. It\'s user- friendly, offering customizable themes and plugins to extend functionality.WordPress is widely used for blogs, business sites, portfolios, and online stores.It requires minimal coding knowledge, making it accessible to beginners and powerful enough for developers.',
+                icon: 'devicon-wordpress-plain',
             },
+
             {
                 name: 'PHP',
                 description: 'PHP, Hypertext Preprocessor, is a server-side scripting language designed for web development. It facilitates the creation of dynamic web pages by embedding code within HTML. PHP is widely used for tasks such as form processing, database management, and server-side scripting, making it a cornerstone of back-end development.',
@@ -55,9 +56,9 @@ export const store = reactive(
                 icon: 'devicon-laravel-plain',
             },
             {
-                name: 'Express.Js',
+                name: 'Node.Js',
                 description: 'Express is a flexible and minimalist web application framework for Node.js. It simplifies the process of building web applications and APIs by providing a robust set of features for handling HTTP requests, routing, middleware integration, and templating. With its lightweight and unopinionated design, Express allows developers to create scalable and modular web applications quickly and efficiently, making it a popular choice for building modern web servers and APIs in Node.js environments.',
-                icon: 'devicon-express-plain',
+                icon: 'devicon-node-plain',
             },
             {
                 name: 'Git',
