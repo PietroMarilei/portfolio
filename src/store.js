@@ -104,6 +104,21 @@ export const store = reactive(
                 }
             },
             {
+                name: "Wordpress Politic Promotion Website",
+                img: 'projectsImg/ugo.png',
+                description: 'A website for the electoral campaign of a European politician',
+                functionality: 'A Wordpress complete experience',
+                link: 'https://www.biggeri.eu/',
+                languages: {
+                    HTML: 'devicon-html5-plain',
+                    CSS: 'devicon-css3-plain',
+                    Wordpress: 'devicon-wordpress-plain',
+                    MySQL: 'devicon-mysql-plain',
+
+                    Git: 'devicon-git-plain',
+                }
+            },
+            {
                 name: "Weather React",
                 img: 'projectsImg/weather.png',
                 description: 'React app based on weather API',
